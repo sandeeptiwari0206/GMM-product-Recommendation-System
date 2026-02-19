@@ -1,0 +1,2001 @@
+user_id,segment,preferred_category
+USR_00000,retail,Beauty
+USR_00001,smb,Beauty
+USR_00002,enterprise,Electronics
+USR_00003,startup,Home & Kitchen
+USR_00004,startup,Books
+USR_00005,startup,Home & Kitchen
+USR_00006,enterprise,Toys
+USR_00007,enterprise,Books
+USR_00008,retail,Books
+USR_00009,startup,Beauty
+USR_00010,startup,Beauty
+USR_00011,retail,Beauty
+USR_00012,retail,Electronics
+USR_00013,smb,Sports
+USR_00014,smb,Toys
+USR_00015,enterprise,Sports
+USR_00016,startup,Electronics
+USR_00017,retail,Automotive
+USR_00018,startup,Clothing
+USR_00019,enterprise,Books
+USR_00020,startup,Clothing
+USR_00021,retail,Toys
+USR_00022,retail,Books
+USR_00023,retail,Beauty
+USR_00024,enterprise,Books
+USR_00025,retail,Automotive
+USR_00026,smb,Beauty
+USR_00027,retail,Sports
+USR_00028,startup,Automotive
+USR_00029,retail,Toys
+USR_00030,retail,Sports
+USR_00031,startup,Books
+USR_00032,enterprise,Toys
+USR_00033,enterprise,Toys
+USR_00034,enterprise,Beauty
+USR_00035,enterprise,Sports
+USR_00036,retail,Sports
+USR_00037,retail,Beauty
+USR_00038,smb,Automotive
+USR_00039,enterprise,Automotive
+USR_00040,startup,Home & Kitchen
+USR_00041,startup,Toys
+USR_00042,startup,Toys
+USR_00043,startup,Home & Kitchen
+USR_00044,smb,Beauty
+USR_00045,smb,Books
+USR_00046,smb,Toys
+USR_00047,enterprise,Sports
+USR_00048,retail,Toys
+USR_00049,startup,Toys
+USR_00050,startup,Automotive
+USR_00051,smb,Home & Kitchen
+USR_00052,enterprise,Clothing
+USR_00053,smb,Books
+USR_00054,startup,Books
+USR_00055,startup,Toys
+USR_00056,smb,Clothing
+USR_00057,startup,Books
+USR_00058,retail,Sports
+USR_00059,retail,Toys
+USR_00060,smb,Automotive
+USR_00061,retail,Home & Kitchen
+USR_00062,retail,Electronics
+USR_00063,smb,Toys
+USR_00064,smb,Home & Kitchen
+USR_00065,smb,Beauty
+USR_00066,retail,Clothing
+USR_00067,startup,Electronics
+USR_00068,enterprise,Beauty
+USR_00069,startup,Automotive
+USR_00070,smb,Beauty
+USR_00071,startup,Automotive
+USR_00072,enterprise,Sports
+USR_00073,startup,Sports
+USR_00074,smb,Toys
+USR_00075,enterprise,Automotive
+USR_00076,retail,Toys
+USR_00077,startup,Home & Kitchen
+USR_00078,retail,Toys
+USR_00079,retail,Books
+USR_00080,enterprise,Beauty
+USR_00081,retail,Books
+USR_00082,retail,Clothing
+USR_00083,startup,Books
+USR_00084,enterprise,Sports
+USR_00085,smb,Electronics
+USR_00086,smb,Beauty
+USR_00087,enterprise,Home & Kitchen
+USR_00088,retail,Toys
+USR_00089,startup,Home & Kitchen
+USR_00090,retail,Home & Kitchen
+USR_00091,smb,Books
+USR_00092,startup,Electronics
+USR_00093,enterprise,Books
+USR_00094,retail,Books
+USR_00095,retail,Automotive
+USR_00096,startup,Beauty
+USR_00097,retail,Sports
+USR_00098,enterprise,Beauty
+USR_00099,startup,Toys
+USR_00100,enterprise,Sports
+USR_00101,enterprise,Beauty
+USR_00102,enterprise,Beauty
+USR_00103,enterprise,Books
+USR_00104,retail,Beauty
+USR_00105,startup,Clothing
+USR_00106,retail,Toys
+USR_00107,smb,Toys
+USR_00108,enterprise,Clothing
+USR_00109,enterprise,Clothing
+USR_00110,smb,Beauty
+USR_00111,smb,Automotive
+USR_00112,enterprise,Automotive
+USR_00113,retail,Books
+USR_00114,retail,Toys
+USR_00115,enterprise,Electronics
+USR_00116,startup,Automotive
+USR_00117,smb,Automotive
+USR_00118,retail,Clothing
+USR_00119,startup,Automotive
+USR_00120,enterprise,Sports
+USR_00121,enterprise,Home & Kitchen
+USR_00122,retail,Automotive
+USR_00123,retail,Home & Kitchen
+USR_00124,enterprise,Books
+USR_00125,retail,Home & Kitchen
+USR_00126,retail,Toys
+USR_00127,retail,Automotive
+USR_00128,enterprise,Books
+USR_00129,smb,Home & Kitchen
+USR_00130,startup,Electronics
+USR_00131,smb,Electronics
+USR_00132,enterprise,Electronics
+USR_00133,startup,Electronics
+USR_00134,enterprise,Automotive
+USR_00135,smb,Clothing
+USR_00136,enterprise,Toys
+USR_00137,retail,Sports
+USR_00138,retail,Electronics
+USR_00139,smb,Beauty
+USR_00140,retail,Clothing
+USR_00141,smb,Books
+USR_00142,enterprise,Home & Kitchen
+USR_00143,enterprise,Home & Kitchen
+USR_00144,smb,Clothing
+USR_00145,startup,Beauty
+USR_00146,smb,Beauty
+USR_00147,startup,Automotive
+USR_00148,smb,Home & Kitchen
+USR_00149,enterprise,Beauty
+USR_00150,retail,Electronics
+USR_00151,smb,Toys
+USR_00152,startup,Home & Kitchen
+USR_00153,retail,Electronics
+USR_00154,startup,Electronics
+USR_00155,startup,Home & Kitchen
+USR_00156,startup,Toys
+USR_00157,startup,Clothing
+USR_00158,smb,Books
+USR_00159,retail,Automotive
+USR_00160,retail,Clothing
+USR_00161,retail,Sports
+USR_00162,retail,Sports
+USR_00163,enterprise,Electronics
+USR_00164,enterprise,Electronics
+USR_00165,smb,Clothing
+USR_00166,retail,Toys
+USR_00167,enterprise,Clothing
+USR_00168,retail,Electronics
+USR_00169,smb,Beauty
+USR_00170,startup,Books
+USR_00171,smb,Books
+USR_00172,enterprise,Sports
+USR_00173,enterprise,Beauty
+USR_00174,enterprise,Books
+USR_00175,smb,Home & Kitchen
+USR_00176,smb,Electronics
+USR_00177,smb,Clothing
+USR_00178,retail,Electronics
+USR_00179,enterprise,Automotive
+USR_00180,smb,Home & Kitchen
+USR_00181,smb,Books
+USR_00182,retail,Electronics
+USR_00183,enterprise,Home & Kitchen
+USR_00184,startup,Beauty
+USR_00185,startup,Books
+USR_00186,enterprise,Toys
+USR_00187,retail,Sports
+USR_00188,enterprise,Beauty
+USR_00189,startup,Sports
+USR_00190,smb,Sports
+USR_00191,enterprise,Beauty
+USR_00192,startup,Home & Kitchen
+USR_00193,smb,Home & Kitchen
+USR_00194,enterprise,Clothing
+USR_00195,retail,Clothing
+USR_00196,startup,Sports
+USR_00197,smb,Electronics
+USR_00198,smb,Books
+USR_00199,retail,Clothing
+USR_00200,startup,Books
+USR_00201,smb,Beauty
+USR_00202,retail,Automotive
+USR_00203,startup,Electronics
+USR_00204,retail,Sports
+USR_00205,retail,Toys
+USR_00206,retail,Books
+USR_00207,retail,Beauty
+USR_00208,startup,Automotive
+USR_00209,retail,Sports
+USR_00210,retail,Toys
+USR_00211,smb,Books
+USR_00212,startup,Electronics
+USR_00213,startup,Clothing
+USR_00214,retail,Home & Kitchen
+USR_00215,retail,Sports
+USR_00216,enterprise,Clothing
+USR_00217,retail,Books
+USR_00218,startup,Beauty
+USR_00219,smb,Beauty
+USR_00220,startup,Clothing
+USR_00221,smb,Home & Kitchen
+USR_00222,retail,Sports
+USR_00223,enterprise,Sports
+USR_00224,smb,Clothing
+USR_00225,startup,Automotive
+USR_00226,retail,Automotive
+USR_00227,smb,Electronics
+USR_00228,enterprise,Books
+USR_00229,enterprise,Clothing
+USR_00230,enterprise,Electronics
+USR_00231,retail,Sports
+USR_00232,smb,Books
+USR_00233,smb,Sports
+USR_00234,retail,Home & Kitchen
+USR_00235,smb,Beauty
+USR_00236,retail,Toys
+USR_00237,enterprise,Electronics
+USR_00238,smb,Automotive
+USR_00239,enterprise,Home & Kitchen
+USR_00240,retail,Home & Kitchen
+USR_00241,enterprise,Home & Kitchen
+USR_00242,startup,Automotive
+USR_00243,retail,Automotive
+USR_00244,startup,Electronics
+USR_00245,retail,Books
+USR_00246,enterprise,Toys
+USR_00247,enterprise,Sports
+USR_00248,enterprise,Books
+USR_00249,startup,Beauty
+USR_00250,enterprise,Books
+USR_00251,startup,Books
+USR_00252,startup,Sports
+USR_00253,smb,Sports
+USR_00254,smb,Electronics
+USR_00255,smb,Beauty
+USR_00256,retail,Clothing
+USR_00257,startup,Automotive
+USR_00258,enterprise,Automotive
+USR_00259,smb,Sports
+USR_00260,retail,Sports
+USR_00261,startup,Beauty
+USR_00262,retail,Clothing
+USR_00263,enterprise,Sports
+USR_00264,smb,Books
+USR_00265,startup,Beauty
+USR_00266,retail,Sports
+USR_00267,smb,Electronics
+USR_00268,smb,Sports
+USR_00269,startup,Clothing
+USR_00270,smb,Books
+USR_00271,retail,Clothing
+USR_00272,startup,Automotive
+USR_00273,startup,Beauty
+USR_00274,smb,Sports
+USR_00275,enterprise,Sports
+USR_00276,enterprise,Toys
+USR_00277,enterprise,Electronics
+USR_00278,retail,Books
+USR_00279,startup,Sports
+USR_00280,smb,Toys
+USR_00281,enterprise,Electronics
+USR_00282,smb,Electronics
+USR_00283,enterprise,Clothing
+USR_00284,enterprise,Books
+USR_00285,smb,Home & Kitchen
+USR_00286,retail,Beauty
+USR_00287,smb,Toys
+USR_00288,smb,Electronics
+USR_00289,retail,Home & Kitchen
+USR_00290,retail,Clothing
+USR_00291,smb,Electronics
+USR_00292,retail,Beauty
+USR_00293,enterprise,Automotive
+USR_00294,retail,Books
+USR_00295,smb,Automotive
+USR_00296,retail,Home & Kitchen
+USR_00297,startup,Books
+USR_00298,retail,Home & Kitchen
+USR_00299,enterprise,Toys
+USR_00300,startup,Clothing
+USR_00301,enterprise,Electronics
+USR_00302,enterprise,Electronics
+USR_00303,startup,Clothing
+USR_00304,enterprise,Automotive
+USR_00305,startup,Beauty
+USR_00306,enterprise,Beauty
+USR_00307,smb,Sports
+USR_00308,enterprise,Home & Kitchen
+USR_00309,startup,Beauty
+USR_00310,smb,Beauty
+USR_00311,smb,Home & Kitchen
+USR_00312,retail,Sports
+USR_00313,retail,Automotive
+USR_00314,retail,Clothing
+USR_00315,smb,Books
+USR_00316,retail,Books
+USR_00317,smb,Clothing
+USR_00318,retail,Books
+USR_00319,enterprise,Clothing
+USR_00320,retail,Home & Kitchen
+USR_00321,startup,Toys
+USR_00322,retail,Home & Kitchen
+USR_00323,smb,Toys
+USR_00324,startup,Sports
+USR_00325,startup,Toys
+USR_00326,smb,Beauty
+USR_00327,startup,Clothing
+USR_00328,startup,Beauty
+USR_00329,startup,Books
+USR_00330,retail,Clothing
+USR_00331,startup,Electronics
+USR_00332,enterprise,Sports
+USR_00333,enterprise,Electronics
+USR_00334,retail,Sports
+USR_00335,retail,Sports
+USR_00336,enterprise,Sports
+USR_00337,startup,Toys
+USR_00338,enterprise,Electronics
+USR_00339,smb,Automotive
+USR_00340,startup,Sports
+USR_00341,enterprise,Clothing
+USR_00342,enterprise,Clothing
+USR_00343,startup,Automotive
+USR_00344,startup,Electronics
+USR_00345,startup,Toys
+USR_00346,retail,Toys
+USR_00347,smb,Home & Kitchen
+USR_00348,retail,Home & Kitchen
+USR_00349,enterprise,Electronics
+USR_00350,smb,Automotive
+USR_00351,retail,Toys
+USR_00352,enterprise,Sports
+USR_00353,startup,Sports
+USR_00354,enterprise,Sports
+USR_00355,startup,Electronics
+USR_00356,retail,Sports
+USR_00357,enterprise,Clothing
+USR_00358,smb,Sports
+USR_00359,enterprise,Electronics
+USR_00360,startup,Sports
+USR_00361,retail,Clothing
+USR_00362,smb,Beauty
+USR_00363,smb,Automotive
+USR_00364,retail,Automotive
+USR_00365,retail,Electronics
+USR_00366,enterprise,Home & Kitchen
+USR_00367,enterprise,Electronics
+USR_00368,smb,Books
+USR_00369,enterprise,Home & Kitchen
+USR_00370,startup,Home & Kitchen
+USR_00371,startup,Automotive
+USR_00372,enterprise,Electronics
+USR_00373,smb,Books
+USR_00374,enterprise,Home & Kitchen
+USR_00375,retail,Beauty
+USR_00376,retail,Sports
+USR_00377,smb,Books
+USR_00378,smb,Automotive
+USR_00379,retail,Books
+USR_00380,retail,Beauty
+USR_00381,startup,Beauty
+USR_00382,enterprise,Electronics
+USR_00383,smb,Electronics
+USR_00384,retail,Electronics
+USR_00385,smb,Books
+USR_00386,retail,Clothing
+USR_00387,smb,Electronics
+USR_00388,smb,Clothing
+USR_00389,startup,Home & Kitchen
+USR_00390,startup,Sports
+USR_00391,startup,Beauty
+USR_00392,startup,Sports
+USR_00393,startup,Clothing
+USR_00394,retail,Beauty
+USR_00395,enterprise,Books
+USR_00396,retail,Toys
+USR_00397,enterprise,Sports
+USR_00398,startup,Clothing
+USR_00399,smb,Electronics
+USR_00400,smb,Clothing
+USR_00401,enterprise,Home & Kitchen
+USR_00402,enterprise,Beauty
+USR_00403,retail,Clothing
+USR_00404,enterprise,Electronics
+USR_00405,retail,Toys
+USR_00406,startup,Clothing
+USR_00407,smb,Electronics
+USR_00408,smb,Beauty
+USR_00409,retail,Electronics
+USR_00410,enterprise,Home & Kitchen
+USR_00411,retail,Automotive
+USR_00412,enterprise,Home & Kitchen
+USR_00413,enterprise,Sports
+USR_00414,enterprise,Toys
+USR_00415,retail,Electronics
+USR_00416,startup,Electronics
+USR_00417,smb,Toys
+USR_00418,retail,Automotive
+USR_00419,startup,Toys
+USR_00420,smb,Electronics
+USR_00421,retail,Automotive
+USR_00422,retail,Sports
+USR_00423,startup,Books
+USR_00424,retail,Home & Kitchen
+USR_00425,smb,Home & Kitchen
+USR_00426,startup,Electronics
+USR_00427,retail,Automotive
+USR_00428,smb,Sports
+USR_00429,retail,Automotive
+USR_00430,startup,Electronics
+USR_00431,retail,Home & Kitchen
+USR_00432,smb,Beauty
+USR_00433,enterprise,Sports
+USR_00434,retail,Clothing
+USR_00435,retail,Home & Kitchen
+USR_00436,smb,Clothing
+USR_00437,smb,Books
+USR_00438,startup,Clothing
+USR_00439,enterprise,Sports
+USR_00440,startup,Clothing
+USR_00441,smb,Books
+USR_00442,smb,Home & Kitchen
+USR_00443,smb,Books
+USR_00444,smb,Sports
+USR_00445,startup,Automotive
+USR_00446,enterprise,Beauty
+USR_00447,smb,Beauty
+USR_00448,startup,Automotive
+USR_00449,startup,Clothing
+USR_00450,startup,Clothing
+USR_00451,startup,Sports
+USR_00452,startup,Electronics
+USR_00453,smb,Sports
+USR_00454,smb,Toys
+USR_00455,enterprise,Toys
+USR_00456,enterprise,Sports
+USR_00457,enterprise,Automotive
+USR_00458,enterprise,Books
+USR_00459,retail,Books
+USR_00460,startup,Sports
+USR_00461,startup,Home & Kitchen
+USR_00462,startup,Clothing
+USR_00463,retail,Automotive
+USR_00464,startup,Sports
+USR_00465,startup,Electronics
+USR_00466,startup,Clothing
+USR_00467,startup,Toys
+USR_00468,startup,Home & Kitchen
+USR_00469,enterprise,Sports
+USR_00470,retail,Beauty
+USR_00471,smb,Home & Kitchen
+USR_00472,enterprise,Beauty
+USR_00473,retail,Clothing
+USR_00474,startup,Electronics
+USR_00475,retail,Clothing
+USR_00476,startup,Beauty
+USR_00477,startup,Beauty
+USR_00478,retail,Automotive
+USR_00479,smb,Clothing
+USR_00480,startup,Beauty
+USR_00481,startup,Sports
+USR_00482,enterprise,Toys
+USR_00483,retail,Toys
+USR_00484,retail,Clothing
+USR_00485,retail,Sports
+USR_00486,enterprise,Sports
+USR_00487,retail,Beauty
+USR_00488,retail,Beauty
+USR_00489,startup,Toys
+USR_00490,smb,Toys
+USR_00491,smb,Home & Kitchen
+USR_00492,enterprise,Beauty
+USR_00493,retail,Toys
+USR_00494,enterprise,Electronics
+USR_00495,smb,Automotive
+USR_00496,enterprise,Automotive
+USR_00497,startup,Automotive
+USR_00498,startup,Sports
+USR_00499,startup,Books
+USR_00500,retail,Beauty
+USR_00501,startup,Beauty
+USR_00502,enterprise,Automotive
+USR_00503,startup,Automotive
+USR_00504,retail,Home & Kitchen
+USR_00505,startup,Sports
+USR_00506,startup,Toys
+USR_00507,retail,Sports
+USR_00508,retail,Home & Kitchen
+USR_00509,startup,Clothing
+USR_00510,smb,Sports
+USR_00511,startup,Automotive
+USR_00512,enterprise,Electronics
+USR_00513,retail,Sports
+USR_00514,startup,Home & Kitchen
+USR_00515,smb,Books
+USR_00516,startup,Home & Kitchen
+USR_00517,enterprise,Automotive
+USR_00518,retail,Home & Kitchen
+USR_00519,enterprise,Automotive
+USR_00520,smb,Electronics
+USR_00521,enterprise,Clothing
+USR_00522,enterprise,Automotive
+USR_00523,retail,Toys
+USR_00524,enterprise,Electronics
+USR_00525,smb,Toys
+USR_00526,smb,Electronics
+USR_00527,retail,Sports
+USR_00528,smb,Books
+USR_00529,smb,Home & Kitchen
+USR_00530,smb,Electronics
+USR_00531,smb,Toys
+USR_00532,smb,Electronics
+USR_00533,smb,Automotive
+USR_00534,smb,Beauty
+USR_00535,startup,Clothing
+USR_00536,smb,Clothing
+USR_00537,retail,Beauty
+USR_00538,startup,Automotive
+USR_00539,smb,Books
+USR_00540,smb,Automotive
+USR_00541,retail,Home & Kitchen
+USR_00542,smb,Electronics
+USR_00543,startup,Sports
+USR_00544,startup,Beauty
+USR_00545,retail,Clothing
+USR_00546,smb,Electronics
+USR_00547,retail,Sports
+USR_00548,smb,Electronics
+USR_00549,startup,Books
+USR_00550,smb,Automotive
+USR_00551,smb,Automotive
+USR_00552,startup,Beauty
+USR_00553,startup,Books
+USR_00554,startup,Sports
+USR_00555,smb,Clothing
+USR_00556,retail,Beauty
+USR_00557,startup,Books
+USR_00558,smb,Clothing
+USR_00559,retail,Sports
+USR_00560,enterprise,Beauty
+USR_00561,enterprise,Toys
+USR_00562,smb,Sports
+USR_00563,smb,Electronics
+USR_00564,startup,Automotive
+USR_00565,smb,Sports
+USR_00566,retail,Electronics
+USR_00567,smb,Clothing
+USR_00568,retail,Toys
+USR_00569,retail,Beauty
+USR_00570,startup,Toys
+USR_00571,retail,Electronics
+USR_00572,smb,Beauty
+USR_00573,retail,Clothing
+USR_00574,enterprise,Books
+USR_00575,retail,Clothing
+USR_00576,smb,Toys
+USR_00577,startup,Home & Kitchen
+USR_00578,smb,Electronics
+USR_00579,smb,Automotive
+USR_00580,smb,Books
+USR_00581,enterprise,Clothing
+USR_00582,startup,Sports
+USR_00583,enterprise,Toys
+USR_00584,retail,Automotive
+USR_00585,retail,Electronics
+USR_00586,enterprise,Clothing
+USR_00587,startup,Books
+USR_00588,retail,Beauty
+USR_00589,startup,Toys
+USR_00590,enterprise,Toys
+USR_00591,retail,Sports
+USR_00592,enterprise,Beauty
+USR_00593,retail,Electronics
+USR_00594,smb,Toys
+USR_00595,startup,Books
+USR_00596,enterprise,Toys
+USR_00597,smb,Sports
+USR_00598,enterprise,Beauty
+USR_00599,enterprise,Home & Kitchen
+USR_00600,startup,Sports
+USR_00601,enterprise,Beauty
+USR_00602,startup,Electronics
+USR_00603,enterprise,Home & Kitchen
+USR_00604,retail,Clothing
+USR_00605,smb,Home & Kitchen
+USR_00606,retail,Home & Kitchen
+USR_00607,startup,Home & Kitchen
+USR_00608,startup,Toys
+USR_00609,smb,Toys
+USR_00610,startup,Sports
+USR_00611,retail,Automotive
+USR_00612,smb,Automotive
+USR_00613,startup,Home & Kitchen
+USR_00614,startup,Home & Kitchen
+USR_00615,startup,Toys
+USR_00616,startup,Clothing
+USR_00617,enterprise,Home & Kitchen
+USR_00618,enterprise,Beauty
+USR_00619,enterprise,Sports
+USR_00620,startup,Books
+USR_00621,enterprise,Toys
+USR_00622,startup,Books
+USR_00623,retail,Sports
+USR_00624,startup,Automotive
+USR_00625,smb,Sports
+USR_00626,smb,Home & Kitchen
+USR_00627,smb,Sports
+USR_00628,startup,Home & Kitchen
+USR_00629,smb,Automotive
+USR_00630,smb,Electronics
+USR_00631,startup,Clothing
+USR_00632,startup,Clothing
+USR_00633,enterprise,Clothing
+USR_00634,startup,Toys
+USR_00635,enterprise,Electronics
+USR_00636,startup,Clothing
+USR_00637,retail,Home & Kitchen
+USR_00638,smb,Beauty
+USR_00639,retail,Books
+USR_00640,startup,Automotive
+USR_00641,retail,Automotive
+USR_00642,enterprise,Clothing
+USR_00643,startup,Toys
+USR_00644,startup,Clothing
+USR_00645,retail,Home & Kitchen
+USR_00646,smb,Beauty
+USR_00647,startup,Home & Kitchen
+USR_00648,smb,Clothing
+USR_00649,retail,Sports
+USR_00650,retail,Electronics
+USR_00651,retail,Toys
+USR_00652,enterprise,Automotive
+USR_00653,startup,Books
+USR_00654,retail,Books
+USR_00655,retail,Toys
+USR_00656,enterprise,Electronics
+USR_00657,startup,Toys
+USR_00658,smb,Clothing
+USR_00659,startup,Clothing
+USR_00660,retail,Clothing
+USR_00661,smb,Clothing
+USR_00662,enterprise,Clothing
+USR_00663,enterprise,Beauty
+USR_00664,retail,Automotive
+USR_00665,smb,Books
+USR_00666,startup,Clothing
+USR_00667,retail,Home & Kitchen
+USR_00668,smb,Sports
+USR_00669,smb,Clothing
+USR_00670,smb,Beauty
+USR_00671,smb,Home & Kitchen
+USR_00672,enterprise,Books
+USR_00673,smb,Home & Kitchen
+USR_00674,smb,Electronics
+USR_00675,retail,Electronics
+USR_00676,enterprise,Home & Kitchen
+USR_00677,enterprise,Clothing
+USR_00678,enterprise,Automotive
+USR_00679,startup,Clothing
+USR_00680,startup,Beauty
+USR_00681,enterprise,Clothing
+USR_00682,retail,Beauty
+USR_00683,smb,Automotive
+USR_00684,smb,Home & Kitchen
+USR_00685,enterprise,Electronics
+USR_00686,enterprise,Electronics
+USR_00687,startup,Books
+USR_00688,enterprise,Toys
+USR_00689,startup,Automotive
+USR_00690,enterprise,Beauty
+USR_00691,smb,Automotive
+USR_00692,enterprise,Toys
+USR_00693,smb,Electronics
+USR_00694,enterprise,Automotive
+USR_00695,startup,Electronics
+USR_00696,enterprise,Sports
+USR_00697,retail,Electronics
+USR_00698,smb,Home & Kitchen
+USR_00699,smb,Beauty
+USR_00700,smb,Clothing
+USR_00701,enterprise,Home & Kitchen
+USR_00702,retail,Beauty
+USR_00703,retail,Clothing
+USR_00704,startup,Clothing
+USR_00705,startup,Books
+USR_00706,startup,Beauty
+USR_00707,retail,Automotive
+USR_00708,smb,Electronics
+USR_00709,smb,Books
+USR_00710,startup,Clothing
+USR_00711,startup,Toys
+USR_00712,enterprise,Sports
+USR_00713,enterprise,Sports
+USR_00714,retail,Automotive
+USR_00715,enterprise,Toys
+USR_00716,startup,Beauty
+USR_00717,startup,Books
+USR_00718,startup,Books
+USR_00719,smb,Electronics
+USR_00720,startup,Books
+USR_00721,enterprise,Toys
+USR_00722,retail,Books
+USR_00723,enterprise,Automotive
+USR_00724,smb,Home & Kitchen
+USR_00725,enterprise,Books
+USR_00726,enterprise,Beauty
+USR_00727,smb,Books
+USR_00728,enterprise,Beauty
+USR_00729,smb,Toys
+USR_00730,enterprise,Beauty
+USR_00731,smb,Home & Kitchen
+USR_00732,retail,Clothing
+USR_00733,retail,Beauty
+USR_00734,smb,Toys
+USR_00735,startup,Toys
+USR_00736,smb,Clothing
+USR_00737,enterprise,Home & Kitchen
+USR_00738,startup,Electronics
+USR_00739,startup,Books
+USR_00740,startup,Beauty
+USR_00741,smb,Electronics
+USR_00742,smb,Sports
+USR_00743,startup,Electronics
+USR_00744,smb,Toys
+USR_00745,retail,Books
+USR_00746,enterprise,Clothing
+USR_00747,enterprise,Books
+USR_00748,enterprise,Beauty
+USR_00749,smb,Books
+USR_00750,enterprise,Books
+USR_00751,retail,Electronics
+USR_00752,enterprise,Toys
+USR_00753,retail,Clothing
+USR_00754,smb,Clothing
+USR_00755,smb,Beauty
+USR_00756,enterprise,Electronics
+USR_00757,startup,Electronics
+USR_00758,retail,Electronics
+USR_00759,startup,Sports
+USR_00760,retail,Sports
+USR_00761,smb,Books
+USR_00762,smb,Beauty
+USR_00763,retail,Automotive
+USR_00764,retail,Sports
+USR_00765,smb,Toys
+USR_00766,retail,Electronics
+USR_00767,retail,Electronics
+USR_00768,startup,Electronics
+USR_00769,enterprise,Clothing
+USR_00770,startup,Beauty
+USR_00771,smb,Toys
+USR_00772,startup,Clothing
+USR_00773,smb,Sports
+USR_00774,retail,Toys
+USR_00775,enterprise,Home & Kitchen
+USR_00776,smb,Home & Kitchen
+USR_00777,enterprise,Electronics
+USR_00778,enterprise,Clothing
+USR_00779,startup,Automotive
+USR_00780,smb,Beauty
+USR_00781,startup,Books
+USR_00782,retail,Sports
+USR_00783,retail,Clothing
+USR_00784,smb,Electronics
+USR_00785,smb,Electronics
+USR_00786,retail,Home & Kitchen
+USR_00787,smb,Beauty
+USR_00788,startup,Toys
+USR_00789,startup,Beauty
+USR_00790,smb,Electronics
+USR_00791,startup,Toys
+USR_00792,smb,Electronics
+USR_00793,startup,Books
+USR_00794,startup,Sports
+USR_00795,enterprise,Automotive
+USR_00796,startup,Books
+USR_00797,smb,Toys
+USR_00798,startup,Home & Kitchen
+USR_00799,startup,Clothing
+USR_00800,retail,Beauty
+USR_00801,smb,Home & Kitchen
+USR_00802,startup,Beauty
+USR_00803,enterprise,Electronics
+USR_00804,retail,Sports
+USR_00805,enterprise,Electronics
+USR_00806,enterprise,Sports
+USR_00807,retail,Sports
+USR_00808,enterprise,Automotive
+USR_00809,smb,Sports
+USR_00810,smb,Clothing
+USR_00811,enterprise,Home & Kitchen
+USR_00812,smb,Toys
+USR_00813,startup,Beauty
+USR_00814,startup,Beauty
+USR_00815,startup,Clothing
+USR_00816,enterprise,Toys
+USR_00817,enterprise,Clothing
+USR_00818,smb,Clothing
+USR_00819,smb,Books
+USR_00820,smb,Books
+USR_00821,enterprise,Books
+USR_00822,smb,Toys
+USR_00823,startup,Clothing
+USR_00824,startup,Electronics
+USR_00825,retail,Toys
+USR_00826,retail,Books
+USR_00827,retail,Books
+USR_00828,startup,Toys
+USR_00829,enterprise,Toys
+USR_00830,smb,Clothing
+USR_00831,smb,Home & Kitchen
+USR_00832,enterprise,Electronics
+USR_00833,retail,Sports
+USR_00834,enterprise,Toys
+USR_00835,startup,Sports
+USR_00836,enterprise,Beauty
+USR_00837,startup,Toys
+USR_00838,startup,Electronics
+USR_00839,retail,Automotive
+USR_00840,smb,Clothing
+USR_00841,retail,Toys
+USR_00842,startup,Home & Kitchen
+USR_00843,retail,Home & Kitchen
+USR_00844,smb,Automotive
+USR_00845,retail,Sports
+USR_00846,startup,Home & Kitchen
+USR_00847,smb,Sports
+USR_00848,retail,Beauty
+USR_00849,enterprise,Books
+USR_00850,smb,Automotive
+USR_00851,retail,Beauty
+USR_00852,enterprise,Clothing
+USR_00853,smb,Home & Kitchen
+USR_00854,enterprise,Clothing
+USR_00855,retail,Books
+USR_00856,enterprise,Electronics
+USR_00857,enterprise,Electronics
+USR_00858,startup,Electronics
+USR_00859,enterprise,Sports
+USR_00860,smb,Sports
+USR_00861,enterprise,Electronics
+USR_00862,enterprise,Books
+USR_00863,smb,Beauty
+USR_00864,retail,Automotive
+USR_00865,retail,Toys
+USR_00866,enterprise,Sports
+USR_00867,smb,Beauty
+USR_00868,enterprise,Beauty
+USR_00869,smb,Electronics
+USR_00870,smb,Clothing
+USR_00871,retail,Electronics
+USR_00872,enterprise,Toys
+USR_00873,enterprise,Electronics
+USR_00874,enterprise,Toys
+USR_00875,enterprise,Clothing
+USR_00876,enterprise,Automotive
+USR_00877,enterprise,Beauty
+USR_00878,startup,Automotive
+USR_00879,enterprise,Sports
+USR_00880,startup,Beauty
+USR_00881,startup,Clothing
+USR_00882,startup,Toys
+USR_00883,enterprise,Sports
+USR_00884,smb,Books
+USR_00885,retail,Sports
+USR_00886,smb,Toys
+USR_00887,smb,Toys
+USR_00888,enterprise,Home & Kitchen
+USR_00889,smb,Sports
+USR_00890,smb,Home & Kitchen
+USR_00891,enterprise,Sports
+USR_00892,enterprise,Toys
+USR_00893,retail,Clothing
+USR_00894,retail,Automotive
+USR_00895,startup,Sports
+USR_00896,retail,Automotive
+USR_00897,enterprise,Electronics
+USR_00898,smb,Sports
+USR_00899,enterprise,Clothing
+USR_00900,enterprise,Clothing
+USR_00901,smb,Sports
+USR_00902,retail,Toys
+USR_00903,smb,Sports
+USR_00904,enterprise,Sports
+USR_00905,retail,Beauty
+USR_00906,enterprise,Beauty
+USR_00907,enterprise,Books
+USR_00908,retail,Automotive
+USR_00909,smb,Toys
+USR_00910,startup,Automotive
+USR_00911,retail,Automotive
+USR_00912,enterprise,Automotive
+USR_00913,enterprise,Home & Kitchen
+USR_00914,retail,Sports
+USR_00915,enterprise,Sports
+USR_00916,startup,Home & Kitchen
+USR_00917,retail,Electronics
+USR_00918,enterprise,Books
+USR_00919,startup,Books
+USR_00920,enterprise,Automotive
+USR_00921,retail,Automotive
+USR_00922,smb,Electronics
+USR_00923,startup,Home & Kitchen
+USR_00924,retail,Toys
+USR_00925,retail,Home & Kitchen
+USR_00926,retail,Clothing
+USR_00927,smb,Home & Kitchen
+USR_00928,enterprise,Beauty
+USR_00929,smb,Toys
+USR_00930,retail,Books
+USR_00931,startup,Toys
+USR_00932,enterprise,Beauty
+USR_00933,smb,Automotive
+USR_00934,startup,Clothing
+USR_00935,retail,Sports
+USR_00936,startup,Sports
+USR_00937,startup,Sports
+USR_00938,retail,Automotive
+USR_00939,smb,Automotive
+USR_00940,retail,Clothing
+USR_00941,startup,Books
+USR_00942,retail,Home & Kitchen
+USR_00943,enterprise,Clothing
+USR_00944,enterprise,Toys
+USR_00945,startup,Books
+USR_00946,retail,Toys
+USR_00947,startup,Automotive
+USR_00948,retail,Automotive
+USR_00949,enterprise,Home & Kitchen
+USR_00950,enterprise,Electronics
+USR_00951,startup,Books
+USR_00952,enterprise,Beauty
+USR_00953,startup,Beauty
+USR_00954,smb,Electronics
+USR_00955,startup,Toys
+USR_00956,retail,Sports
+USR_00957,retail,Toys
+USR_00958,retail,Sports
+USR_00959,startup,Books
+USR_00960,smb,Beauty
+USR_00961,startup,Electronics
+USR_00962,startup,Clothing
+USR_00963,smb,Home & Kitchen
+USR_00964,enterprise,Sports
+USR_00965,enterprise,Sports
+USR_00966,enterprise,Sports
+USR_00967,enterprise,Sports
+USR_00968,enterprise,Beauty
+USR_00969,smb,Books
+USR_00970,smb,Beauty
+USR_00971,startup,Books
+USR_00972,enterprise,Electronics
+USR_00973,retail,Automotive
+USR_00974,smb,Clothing
+USR_00975,smb,Electronics
+USR_00976,enterprise,Beauty
+USR_00977,retail,Beauty
+USR_00978,retail,Clothing
+USR_00979,smb,Books
+USR_00980,startup,Sports
+USR_00981,retail,Electronics
+USR_00982,startup,Clothing
+USR_00983,enterprise,Home & Kitchen
+USR_00984,enterprise,Clothing
+USR_00985,enterprise,Automotive
+USR_00986,startup,Automotive
+USR_00987,smb,Electronics
+USR_00988,startup,Toys
+USR_00989,enterprise,Books
+USR_00990,retail,Sports
+USR_00991,smb,Home & Kitchen
+USR_00992,startup,Toys
+USR_00993,retail,Electronics
+USR_00994,retail,Books
+USR_00995,enterprise,Clothing
+USR_00996,enterprise,Books
+USR_00997,retail,Books
+USR_00998,smb,Automotive
+USR_00999,startup,Sports
+USR_01000,smb,Electronics
+USR_01001,smb,Beauty
+USR_01002,startup,Automotive
+USR_01003,startup,Books
+USR_01004,startup,Clothing
+USR_01005,smb,Toys
+USR_01006,smb,Toys
+USR_01007,startup,Clothing
+USR_01008,retail,Automotive
+USR_01009,retail,Sports
+USR_01010,startup,Books
+USR_01011,smb,Clothing
+USR_01012,startup,Beauty
+USR_01013,enterprise,Clothing
+USR_01014,retail,Sports
+USR_01015,retail,Books
+USR_01016,retail,Sports
+USR_01017,startup,Toys
+USR_01018,enterprise,Books
+USR_01019,retail,Clothing
+USR_01020,enterprise,Automotive
+USR_01021,smb,Beauty
+USR_01022,smb,Electronics
+USR_01023,retail,Automotive
+USR_01024,smb,Clothing
+USR_01025,startup,Electronics
+USR_01026,smb,Books
+USR_01027,startup,Books
+USR_01028,smb,Home & Kitchen
+USR_01029,enterprise,Books
+USR_01030,smb,Toys
+USR_01031,enterprise,Books
+USR_01032,startup,Home & Kitchen
+USR_01033,smb,Electronics
+USR_01034,smb,Books
+USR_01035,enterprise,Sports
+USR_01036,smb,Automotive
+USR_01037,startup,Automotive
+USR_01038,enterprise,Books
+USR_01039,startup,Books
+USR_01040,retail,Automotive
+USR_01041,startup,Automotive
+USR_01042,enterprise,Clothing
+USR_01043,startup,Books
+USR_01044,smb,Toys
+USR_01045,startup,Books
+USR_01046,smb,Sports
+USR_01047,enterprise,Home & Kitchen
+USR_01048,smb,Home & Kitchen
+USR_01049,startup,Home & Kitchen
+USR_01050,retail,Clothing
+USR_01051,smb,Books
+USR_01052,retail,Electronics
+USR_01053,retail,Electronics
+USR_01054,retail,Sports
+USR_01055,retail,Clothing
+USR_01056,startup,Beauty
+USR_01057,smb,Clothing
+USR_01058,enterprise,Books
+USR_01059,enterprise,Beauty
+USR_01060,smb,Electronics
+USR_01061,enterprise,Clothing
+USR_01062,smb,Sports
+USR_01063,startup,Toys
+USR_01064,smb,Electronics
+USR_01065,startup,Toys
+USR_01066,smb,Automotive
+USR_01067,retail,Clothing
+USR_01068,retail,Books
+USR_01069,startup,Automotive
+USR_01070,enterprise,Books
+USR_01071,retail,Toys
+USR_01072,smb,Beauty
+USR_01073,enterprise,Books
+USR_01074,enterprise,Books
+USR_01075,startup,Electronics
+USR_01076,enterprise,Electronics
+USR_01077,startup,Clothing
+USR_01078,retail,Sports
+USR_01079,retail,Toys
+USR_01080,enterprise,Home & Kitchen
+USR_01081,enterprise,Home & Kitchen
+USR_01082,smb,Books
+USR_01083,smb,Clothing
+USR_01084,startup,Home & Kitchen
+USR_01085,enterprise,Home & Kitchen
+USR_01086,enterprise,Home & Kitchen
+USR_01087,smb,Home & Kitchen
+USR_01088,startup,Toys
+USR_01089,smb,Toys
+USR_01090,enterprise,Beauty
+USR_01091,startup,Home & Kitchen
+USR_01092,retail,Beauty
+USR_01093,enterprise,Beauty
+USR_01094,smb,Clothing
+USR_01095,startup,Home & Kitchen
+USR_01096,smb,Home & Kitchen
+USR_01097,retail,Beauty
+USR_01098,enterprise,Clothing
+USR_01099,enterprise,Toys
+USR_01100,smb,Electronics
+USR_01101,enterprise,Electronics
+USR_01102,smb,Electronics
+USR_01103,smb,Home & Kitchen
+USR_01104,startup,Clothing
+USR_01105,retail,Electronics
+USR_01106,enterprise,Books
+USR_01107,enterprise,Books
+USR_01108,smb,Clothing
+USR_01109,retail,Automotive
+USR_01110,startup,Home & Kitchen
+USR_01111,smb,Automotive
+USR_01112,retail,Beauty
+USR_01113,enterprise,Electronics
+USR_01114,startup,Home & Kitchen
+USR_01115,startup,Beauty
+USR_01116,smb,Toys
+USR_01117,smb,Electronics
+USR_01118,startup,Sports
+USR_01119,enterprise,Sports
+USR_01120,enterprise,Home & Kitchen
+USR_01121,startup,Books
+USR_01122,smb,Home & Kitchen
+USR_01123,smb,Electronics
+USR_01124,enterprise,Home & Kitchen
+USR_01125,retail,Home & Kitchen
+USR_01126,retail,Automotive
+USR_01127,retail,Electronics
+USR_01128,enterprise,Books
+USR_01129,startup,Sports
+USR_01130,retail,Beauty
+USR_01131,enterprise,Electronics
+USR_01132,enterprise,Home & Kitchen
+USR_01133,smb,Clothing
+USR_01134,smb,Home & Kitchen
+USR_01135,enterprise,Beauty
+USR_01136,smb,Home & Kitchen
+USR_01137,smb,Clothing
+USR_01138,smb,Beauty
+USR_01139,enterprise,Home & Kitchen
+USR_01140,retail,Clothing
+USR_01141,smb,Toys
+USR_01142,enterprise,Automotive
+USR_01143,enterprise,Home & Kitchen
+USR_01144,startup,Books
+USR_01145,startup,Beauty
+USR_01146,retail,Sports
+USR_01147,startup,Books
+USR_01148,enterprise,Electronics
+USR_01149,startup,Electronics
+USR_01150,smb,Home & Kitchen
+USR_01151,startup,Toys
+USR_01152,enterprise,Electronics
+USR_01153,retail,Toys
+USR_01154,retail,Electronics
+USR_01155,retail,Toys
+USR_01156,retail,Home & Kitchen
+USR_01157,smb,Home & Kitchen
+USR_01158,smb,Sports
+USR_01159,smb,Clothing
+USR_01160,startup,Home & Kitchen
+USR_01161,startup,Toys
+USR_01162,startup,Sports
+USR_01163,retail,Books
+USR_01164,retail,Electronics
+USR_01165,startup,Toys
+USR_01166,smb,Toys
+USR_01167,enterprise,Clothing
+USR_01168,startup,Toys
+USR_01169,enterprise,Automotive
+USR_01170,smb,Toys
+USR_01171,enterprise,Toys
+USR_01172,retail,Beauty
+USR_01173,enterprise,Books
+USR_01174,startup,Automotive
+USR_01175,startup,Home & Kitchen
+USR_01176,smb,Books
+USR_01177,startup,Beauty
+USR_01178,enterprise,Sports
+USR_01179,retail,Home & Kitchen
+USR_01180,enterprise,Toys
+USR_01181,enterprise,Automotive
+USR_01182,enterprise,Toys
+USR_01183,startup,Home & Kitchen
+USR_01184,smb,Clothing
+USR_01185,startup,Sports
+USR_01186,enterprise,Electronics
+USR_01187,smb,Books
+USR_01188,smb,Beauty
+USR_01189,enterprise,Clothing
+USR_01190,enterprise,Beauty
+USR_01191,startup,Clothing
+USR_01192,smb,Toys
+USR_01193,retail,Automotive
+USR_01194,smb,Automotive
+USR_01195,startup,Home & Kitchen
+USR_01196,enterprise,Books
+USR_01197,smb,Clothing
+USR_01198,retail,Home & Kitchen
+USR_01199,startup,Home & Kitchen
+USR_01200,smb,Sports
+USR_01201,startup,Home & Kitchen
+USR_01202,smb,Electronics
+USR_01203,enterprise,Toys
+USR_01204,retail,Automotive
+USR_01205,enterprise,Sports
+USR_01206,smb,Sports
+USR_01207,retail,Electronics
+USR_01208,smb,Electronics
+USR_01209,smb,Beauty
+USR_01210,retail,Toys
+USR_01211,retail,Clothing
+USR_01212,startup,Automotive
+USR_01213,retail,Toys
+USR_01214,enterprise,Beauty
+USR_01215,retail,Toys
+USR_01216,retail,Clothing
+USR_01217,startup,Automotive
+USR_01218,enterprise,Beauty
+USR_01219,enterprise,Automotive
+USR_01220,retail,Electronics
+USR_01221,retail,Clothing
+USR_01222,startup,Electronics
+USR_01223,enterprise,Automotive
+USR_01224,enterprise,Electronics
+USR_01225,smb,Beauty
+USR_01226,startup,Home & Kitchen
+USR_01227,startup,Clothing
+USR_01228,retail,Sports
+USR_01229,enterprise,Sports
+USR_01230,retail,Clothing
+USR_01231,startup,Clothing
+USR_01232,enterprise,Clothing
+USR_01233,enterprise,Clothing
+USR_01234,startup,Automotive
+USR_01235,enterprise,Home & Kitchen
+USR_01236,smb,Electronics
+USR_01237,startup,Automotive
+USR_01238,startup,Clothing
+USR_01239,enterprise,Beauty
+USR_01240,startup,Automotive
+USR_01241,retail,Clothing
+USR_01242,startup,Electronics
+USR_01243,retail,Electronics
+USR_01244,smb,Electronics
+USR_01245,smb,Automotive
+USR_01246,retail,Beauty
+USR_01247,startup,Books
+USR_01248,retail,Sports
+USR_01249,enterprise,Automotive
+USR_01250,retail,Beauty
+USR_01251,smb,Clothing
+USR_01252,smb,Home & Kitchen
+USR_01253,retail,Home & Kitchen
+USR_01254,smb,Toys
+USR_01255,enterprise,Electronics
+USR_01256,startup,Home & Kitchen
+USR_01257,startup,Sports
+USR_01258,retail,Automotive
+USR_01259,smb,Clothing
+USR_01260,startup,Automotive
+USR_01261,smb,Toys
+USR_01262,retail,Home & Kitchen
+USR_01263,smb,Sports
+USR_01264,enterprise,Sports
+USR_01265,enterprise,Books
+USR_01266,smb,Books
+USR_01267,enterprise,Home & Kitchen
+USR_01268,retail,Sports
+USR_01269,enterprise,Electronics
+USR_01270,enterprise,Books
+USR_01271,startup,Sports
+USR_01272,startup,Books
+USR_01273,retail,Clothing
+USR_01274,enterprise,Toys
+USR_01275,startup,Sports
+USR_01276,smb,Sports
+USR_01277,smb,Beauty
+USR_01278,enterprise,Clothing
+USR_01279,retail,Beauty
+USR_01280,enterprise,Books
+USR_01281,startup,Automotive
+USR_01282,enterprise,Clothing
+USR_01283,enterprise,Toys
+USR_01284,smb,Home & Kitchen
+USR_01285,smb,Electronics
+USR_01286,startup,Books
+USR_01287,retail,Toys
+USR_01288,retail,Sports
+USR_01289,startup,Home & Kitchen
+USR_01290,startup,Books
+USR_01291,enterprise,Toys
+USR_01292,enterprise,Toys
+USR_01293,retail,Automotive
+USR_01294,enterprise,Electronics
+USR_01295,enterprise,Sports
+USR_01296,smb,Clothing
+USR_01297,startup,Electronics
+USR_01298,startup,Beauty
+USR_01299,smb,Books
+USR_01300,smb,Sports
+USR_01301,enterprise,Books
+USR_01302,startup,Electronics
+USR_01303,retail,Toys
+USR_01304,startup,Sports
+USR_01305,retail,Toys
+USR_01306,smb,Electronics
+USR_01307,startup,Books
+USR_01308,smb,Beauty
+USR_01309,startup,Sports
+USR_01310,retail,Automotive
+USR_01311,smb,Toys
+USR_01312,enterprise,Toys
+USR_01313,startup,Toys
+USR_01314,retail,Toys
+USR_01315,enterprise,Automotive
+USR_01316,smb,Sports
+USR_01317,startup,Toys
+USR_01318,startup,Toys
+USR_01319,enterprise,Sports
+USR_01320,enterprise,Books
+USR_01321,smb,Home & Kitchen
+USR_01322,enterprise,Beauty
+USR_01323,startup,Books
+USR_01324,startup,Clothing
+USR_01325,startup,Automotive
+USR_01326,startup,Home & Kitchen
+USR_01327,enterprise,Automotive
+USR_01328,enterprise,Books
+USR_01329,retail,Clothing
+USR_01330,smb,Automotive
+USR_01331,enterprise,Automotive
+USR_01332,smb,Toys
+USR_01333,enterprise,Electronics
+USR_01334,retail,Clothing
+USR_01335,enterprise,Beauty
+USR_01336,startup,Sports
+USR_01337,enterprise,Beauty
+USR_01338,smb,Home & Kitchen
+USR_01339,startup,Books
+USR_01340,enterprise,Automotive
+USR_01341,startup,Toys
+USR_01342,startup,Beauty
+USR_01343,startup,Books
+USR_01344,retail,Sports
+USR_01345,smb,Automotive
+USR_01346,smb,Home & Kitchen
+USR_01347,enterprise,Automotive
+USR_01348,startup,Home & Kitchen
+USR_01349,enterprise,Beauty
+USR_01350,smb,Sports
+USR_01351,startup,Home & Kitchen
+USR_01352,smb,Sports
+USR_01353,startup,Clothing
+USR_01354,startup,Beauty
+USR_01355,retail,Toys
+USR_01356,startup,Automotive
+USR_01357,enterprise,Sports
+USR_01358,smb,Books
+USR_01359,smb,Electronics
+USR_01360,smb,Clothing
+USR_01361,startup,Beauty
+USR_01362,enterprise,Beauty
+USR_01363,retail,Automotive
+USR_01364,retail,Beauty
+USR_01365,enterprise,Books
+USR_01366,enterprise,Clothing
+USR_01367,enterprise,Books
+USR_01368,startup,Toys
+USR_01369,startup,Home & Kitchen
+USR_01370,retail,Sports
+USR_01371,enterprise,Books
+USR_01372,enterprise,Books
+USR_01373,smb,Toys
+USR_01374,retail,Home & Kitchen
+USR_01375,startup,Toys
+USR_01376,enterprise,Electronics
+USR_01377,startup,Toys
+USR_01378,smb,Electronics
+USR_01379,enterprise,Sports
+USR_01380,startup,Home & Kitchen
+USR_01381,startup,Toys
+USR_01382,retail,Toys
+USR_01383,startup,Automotive
+USR_01384,startup,Clothing
+USR_01385,startup,Books
+USR_01386,startup,Sports
+USR_01387,smb,Electronics
+USR_01388,startup,Clothing
+USR_01389,retail,Beauty
+USR_01390,smb,Home & Kitchen
+USR_01391,smb,Automotive
+USR_01392,startup,Automotive
+USR_01393,enterprise,Automotive
+USR_01394,startup,Beauty
+USR_01395,smb,Books
+USR_01396,startup,Beauty
+USR_01397,retail,Automotive
+USR_01398,retail,Beauty
+USR_01399,retail,Books
+USR_01400,startup,Electronics
+USR_01401,startup,Beauty
+USR_01402,smb,Toys
+USR_01403,smb,Electronics
+USR_01404,smb,Sports
+USR_01405,enterprise,Beauty
+USR_01406,retail,Automotive
+USR_01407,enterprise,Automotive
+USR_01408,enterprise,Beauty
+USR_01409,retail,Automotive
+USR_01410,enterprise,Books
+USR_01411,startup,Books
+USR_01412,retail,Beauty
+USR_01413,enterprise,Beauty
+USR_01414,enterprise,Toys
+USR_01415,enterprise,Books
+USR_01416,startup,Books
+USR_01417,enterprise,Clothing
+USR_01418,enterprise,Home & Kitchen
+USR_01419,enterprise,Clothing
+USR_01420,smb,Beauty
+USR_01421,retail,Home & Kitchen
+USR_01422,enterprise,Clothing
+USR_01423,enterprise,Sports
+USR_01424,retail,Home & Kitchen
+USR_01425,enterprise,Books
+USR_01426,startup,Automotive
+USR_01427,enterprise,Home & Kitchen
+USR_01428,enterprise,Books
+USR_01429,smb,Sports
+USR_01430,smb,Automotive
+USR_01431,startup,Toys
+USR_01432,retail,Beauty
+USR_01433,startup,Toys
+USR_01434,retail,Home & Kitchen
+USR_01435,enterprise,Electronics
+USR_01436,smb,Books
+USR_01437,startup,Home & Kitchen
+USR_01438,startup,Automotive
+USR_01439,smb,Clothing
+USR_01440,retail,Toys
+USR_01441,enterprise,Home & Kitchen
+USR_01442,retail,Books
+USR_01443,smb,Electronics
+USR_01444,enterprise,Electronics
+USR_01445,retail,Automotive
+USR_01446,enterprise,Toys
+USR_01447,smb,Clothing
+USR_01448,enterprise,Sports
+USR_01449,startup,Electronics
+USR_01450,smb,Beauty
+USR_01451,startup,Sports
+USR_01452,enterprise,Books
+USR_01453,retail,Home & Kitchen
+USR_01454,enterprise,Sports
+USR_01455,smb,Beauty
+USR_01456,smb,Automotive
+USR_01457,enterprise,Automotive
+USR_01458,retail,Books
+USR_01459,smb,Books
+USR_01460,enterprise,Toys
+USR_01461,retail,Books
+USR_01462,startup,Automotive
+USR_01463,smb,Automotive
+USR_01464,startup,Beauty
+USR_01465,smb,Clothing
+USR_01466,startup,Beauty
+USR_01467,enterprise,Clothing
+USR_01468,retail,Sports
+USR_01469,enterprise,Books
+USR_01470,enterprise,Sports
+USR_01471,enterprise,Electronics
+USR_01472,smb,Sports
+USR_01473,startup,Home & Kitchen
+USR_01474,smb,Books
+USR_01475,smb,Automotive
+USR_01476,retail,Sports
+USR_01477,enterprise,Clothing
+USR_01478,smb,Home & Kitchen
+USR_01479,startup,Sports
+USR_01480,smb,Sports
+USR_01481,retail,Toys
+USR_01482,retail,Sports
+USR_01483,startup,Automotive
+USR_01484,retail,Beauty
+USR_01485,enterprise,Beauty
+USR_01486,enterprise,Beauty
+USR_01487,retail,Clothing
+USR_01488,smb,Sports
+USR_01489,retail,Beauty
+USR_01490,startup,Electronics
+USR_01491,enterprise,Automotive
+USR_01492,enterprise,Electronics
+USR_01493,smb,Electronics
+USR_01494,startup,Sports
+USR_01495,enterprise,Home & Kitchen
+USR_01496,enterprise,Toys
+USR_01497,startup,Toys
+USR_01498,smb,Automotive
+USR_01499,retail,Clothing
+USR_01500,smb,Electronics
+USR_01501,enterprise,Electronics
+USR_01502,enterprise,Beauty
+USR_01503,smb,Home & Kitchen
+USR_01504,smb,Automotive
+USR_01505,enterprise,Electronics
+USR_01506,startup,Clothing
+USR_01507,startup,Home & Kitchen
+USR_01508,retail,Books
+USR_01509,enterprise,Clothing
+USR_01510,enterprise,Clothing
+USR_01511,retail,Sports
+USR_01512,enterprise,Books
+USR_01513,enterprise,Books
+USR_01514,smb,Toys
+USR_01515,startup,Home & Kitchen
+USR_01516,startup,Electronics
+USR_01517,startup,Books
+USR_01518,retail,Home & Kitchen
+USR_01519,smb,Books
+USR_01520,enterprise,Beauty
+USR_01521,startup,Clothing
+USR_01522,startup,Beauty
+USR_01523,smb,Books
+USR_01524,enterprise,Electronics
+USR_01525,retail,Home & Kitchen
+USR_01526,enterprise,Electronics
+USR_01527,retail,Sports
+USR_01528,retail,Electronics
+USR_01529,enterprise,Electronics
+USR_01530,retail,Home & Kitchen
+USR_01531,startup,Beauty
+USR_01532,smb,Clothing
+USR_01533,startup,Beauty
+USR_01534,retail,Books
+USR_01535,retail,Books
+USR_01536,smb,Toys
+USR_01537,smb,Home & Kitchen
+USR_01538,startup,Home & Kitchen
+USR_01539,smb,Beauty
+USR_01540,smb,Toys
+USR_01541,retail,Clothing
+USR_01542,smb,Clothing
+USR_01543,retail,Sports
+USR_01544,enterprise,Books
+USR_01545,enterprise,Books
+USR_01546,enterprise,Toys
+USR_01547,retail,Sports
+USR_01548,enterprise,Home & Kitchen
+USR_01549,startup,Toys
+USR_01550,retail,Books
+USR_01551,startup,Electronics
+USR_01552,retail,Home & Kitchen
+USR_01553,startup,Toys
+USR_01554,enterprise,Home & Kitchen
+USR_01555,startup,Clothing
+USR_01556,enterprise,Automotive
+USR_01557,retail,Beauty
+USR_01558,enterprise,Toys
+USR_01559,smb,Sports
+USR_01560,smb,Beauty
+USR_01561,enterprise,Beauty
+USR_01562,smb,Home & Kitchen
+USR_01563,smb,Clothing
+USR_01564,smb,Electronics
+USR_01565,smb,Electronics
+USR_01566,startup,Books
+USR_01567,smb,Automotive
+USR_01568,retail,Sports
+USR_01569,enterprise,Sports
+USR_01570,retail,Clothing
+USR_01571,smb,Books
+USR_01572,retail,Beauty
+USR_01573,smb,Sports
+USR_01574,startup,Books
+USR_01575,startup,Clothing
+USR_01576,startup,Books
+USR_01577,smb,Toys
+USR_01578,enterprise,Home & Kitchen
+USR_01579,startup,Home & Kitchen
+USR_01580,smb,Home & Kitchen
+USR_01581,smb,Home & Kitchen
+USR_01582,retail,Automotive
+USR_01583,smb,Electronics
+USR_01584,retail,Beauty
+USR_01585,startup,Electronics
+USR_01586,retail,Sports
+USR_01587,smb,Electronics
+USR_01588,retail,Beauty
+USR_01589,startup,Toys
+USR_01590,smb,Books
+USR_01591,enterprise,Books
+USR_01592,enterprise,Electronics
+USR_01593,smb,Books
+USR_01594,startup,Beauty
+USR_01595,smb,Sports
+USR_01596,enterprise,Clothing
+USR_01597,smb,Electronics
+USR_01598,retail,Home & Kitchen
+USR_01599,retail,Books
+USR_01600,startup,Books
+USR_01601,startup,Clothing
+USR_01602,startup,Automotive
+USR_01603,startup,Sports
+USR_01604,retail,Toys
+USR_01605,enterprise,Books
+USR_01606,startup,Home & Kitchen
+USR_01607,startup,Clothing
+USR_01608,enterprise,Toys
+USR_01609,startup,Automotive
+USR_01610,enterprise,Books
+USR_01611,startup,Beauty
+USR_01612,startup,Beauty
+USR_01613,startup,Home & Kitchen
+USR_01614,retail,Toys
+USR_01615,retail,Beauty
+USR_01616,retail,Books
+USR_01617,startup,Home & Kitchen
+USR_01618,retail,Beauty
+USR_01619,retail,Toys
+USR_01620,retail,Clothing
+USR_01621,smb,Automotive
+USR_01622,retail,Toys
+USR_01623,smb,Toys
+USR_01624,retail,Sports
+USR_01625,startup,Electronics
+USR_01626,startup,Automotive
+USR_01627,startup,Beauty
+USR_01628,smb,Electronics
+USR_01629,startup,Sports
+USR_01630,enterprise,Books
+USR_01631,retail,Clothing
+USR_01632,smb,Automotive
+USR_01633,smb,Home & Kitchen
+USR_01634,smb,Toys
+USR_01635,startup,Clothing
+USR_01636,enterprise,Sports
+USR_01637,smb,Books
+USR_01638,retail,Books
+USR_01639,retail,Toys
+USR_01640,enterprise,Automotive
+USR_01641,retail,Sports
+USR_01642,enterprise,Clothing
+USR_01643,retail,Automotive
+USR_01644,enterprise,Electronics
+USR_01645,startup,Clothing
+USR_01646,retail,Automotive
+USR_01647,retail,Automotive
+USR_01648,retail,Beauty
+USR_01649,startup,Books
+USR_01650,startup,Automotive
+USR_01651,smb,Books
+USR_01652,smb,Toys
+USR_01653,enterprise,Beauty
+USR_01654,smb,Toys
+USR_01655,retail,Beauty
+USR_01656,startup,Toys
+USR_01657,startup,Automotive
+USR_01658,startup,Sports
+USR_01659,startup,Clothing
+USR_01660,enterprise,Electronics
+USR_01661,smb,Clothing
+USR_01662,startup,Beauty
+USR_01663,enterprise,Books
+USR_01664,retail,Clothing
+USR_01665,smb,Books
+USR_01666,enterprise,Books
+USR_01667,startup,Automotive
+USR_01668,startup,Home & Kitchen
+USR_01669,startup,Toys
+USR_01670,retail,Automotive
+USR_01671,smb,Electronics
+USR_01672,startup,Sports
+USR_01673,smb,Beauty
+USR_01674,retail,Electronics
+USR_01675,enterprise,Clothing
+USR_01676,smb,Beauty
+USR_01677,enterprise,Beauty
+USR_01678,smb,Home & Kitchen
+USR_01679,startup,Books
+USR_01680,startup,Electronics
+USR_01681,enterprise,Books
+USR_01682,smb,Books
+USR_01683,retail,Home & Kitchen
+USR_01684,smb,Beauty
+USR_01685,enterprise,Automotive
+USR_01686,smb,Beauty
+USR_01687,smb,Toys
+USR_01688,enterprise,Automotive
+USR_01689,enterprise,Electronics
+USR_01690,enterprise,Automotive
+USR_01691,smb,Home & Kitchen
+USR_01692,enterprise,Toys
+USR_01693,enterprise,Books
+USR_01694,retail,Electronics
+USR_01695,retail,Beauty
+USR_01696,retail,Books
+USR_01697,enterprise,Books
+USR_01698,enterprise,Electronics
+USR_01699,retail,Sports
+USR_01700,startup,Home & Kitchen
+USR_01701,startup,Clothing
+USR_01702,retail,Beauty
+USR_01703,retail,Books
+USR_01704,startup,Beauty
+USR_01705,retail,Home & Kitchen
+USR_01706,enterprise,Home & Kitchen
+USR_01707,retail,Electronics
+USR_01708,smb,Electronics
+USR_01709,startup,Toys
+USR_01710,enterprise,Electronics
+USR_01711,startup,Home & Kitchen
+USR_01712,retail,Electronics
+USR_01713,startup,Automotive
+USR_01714,retail,Clothing
+USR_01715,enterprise,Home & Kitchen
+USR_01716,enterprise,Electronics
+USR_01717,startup,Toys
+USR_01718,enterprise,Books
+USR_01719,startup,Home & Kitchen
+USR_01720,startup,Sports
+USR_01721,startup,Sports
+USR_01722,startup,Home & Kitchen
+USR_01723,smb,Home & Kitchen
+USR_01724,smb,Sports
+USR_01725,retail,Books
+USR_01726,enterprise,Books
+USR_01727,smb,Books
+USR_01728,smb,Clothing
+USR_01729,enterprise,Beauty
+USR_01730,startup,Beauty
+USR_01731,smb,Toys
+USR_01732,smb,Clothing
+USR_01733,smb,Toys
+USR_01734,smb,Books
+USR_01735,startup,Sports
+USR_01736,enterprise,Clothing
+USR_01737,smb,Electronics
+USR_01738,smb,Beauty
+USR_01739,smb,Clothing
+USR_01740,smb,Sports
+USR_01741,enterprise,Automotive
+USR_01742,startup,Automotive
+USR_01743,retail,Automotive
+USR_01744,enterprise,Sports
+USR_01745,smb,Home & Kitchen
+USR_01746,retail,Sports
+USR_01747,smb,Toys
+USR_01748,enterprise,Books
+USR_01749,startup,Toys
+USR_01750,retail,Automotive
+USR_01751,retail,Automotive
+USR_01752,startup,Automotive
+USR_01753,startup,Automotive
+USR_01754,retail,Sports
+USR_01755,retail,Clothing
+USR_01756,retail,Clothing
+USR_01757,retail,Clothing
+USR_01758,startup,Sports
+USR_01759,enterprise,Automotive
+USR_01760,enterprise,Automotive
+USR_01761,startup,Books
+USR_01762,enterprise,Beauty
+USR_01763,enterprise,Books
+USR_01764,smb,Home & Kitchen
+USR_01765,enterprise,Electronics
+USR_01766,retail,Automotive
+USR_01767,enterprise,Automotive
+USR_01768,startup,Books
+USR_01769,enterprise,Toys
+USR_01770,startup,Automotive
+USR_01771,retail,Beauty
+USR_01772,smb,Automotive
+USR_01773,smb,Beauty
+USR_01774,enterprise,Clothing
+USR_01775,enterprise,Automotive
+USR_01776,startup,Home & Kitchen
+USR_01777,smb,Beauty
+USR_01778,retail,Books
+USR_01779,startup,Books
+USR_01780,enterprise,Toys
+USR_01781,smb,Automotive
+USR_01782,enterprise,Electronics
+USR_01783,smb,Electronics
+USR_01784,startup,Electronics
+USR_01785,retail,Books
+USR_01786,retail,Beauty
+USR_01787,retail,Toys
+USR_01788,retail,Books
+USR_01789,retail,Clothing
+USR_01790,enterprise,Automotive
+USR_01791,enterprise,Sports
+USR_01792,retail,Electronics
+USR_01793,smb,Clothing
+USR_01794,startup,Clothing
+USR_01795,smb,Beauty
+USR_01796,smb,Home & Kitchen
+USR_01797,retail,Clothing
+USR_01798,smb,Electronics
+USR_01799,enterprise,Sports
+USR_01800,startup,Toys
+USR_01801,startup,Automotive
+USR_01802,startup,Clothing
+USR_01803,smb,Toys
+USR_01804,startup,Books
+USR_01805,startup,Books
+USR_01806,enterprise,Clothing
+USR_01807,retail,Electronics
+USR_01808,retail,Beauty
+USR_01809,enterprise,Beauty
+USR_01810,enterprise,Sports
+USR_01811,retail,Sports
+USR_01812,smb,Electronics
+USR_01813,enterprise,Books
+USR_01814,startup,Books
+USR_01815,enterprise,Beauty
+USR_01816,smb,Toys
+USR_01817,enterprise,Beauty
+USR_01818,startup,Home & Kitchen
+USR_01819,enterprise,Clothing
+USR_01820,enterprise,Beauty
+USR_01821,enterprise,Clothing
+USR_01822,retail,Automotive
+USR_01823,retail,Beauty
+USR_01824,smb,Toys
+USR_01825,retail,Books
+USR_01826,smb,Clothing
+USR_01827,retail,Electronics
+USR_01828,smb,Automotive
+USR_01829,smb,Sports
+USR_01830,smb,Beauty
+USR_01831,enterprise,Home & Kitchen
+USR_01832,enterprise,Electronics
+USR_01833,smb,Electronics
+USR_01834,smb,Automotive
+USR_01835,enterprise,Electronics
+USR_01836,startup,Clothing
+USR_01837,enterprise,Automotive
+USR_01838,smb,Sports
+USR_01839,enterprise,Toys
+USR_01840,retail,Automotive
+USR_01841,smb,Toys
+USR_01842,enterprise,Home & Kitchen
+USR_01843,retail,Books
+USR_01844,enterprise,Electronics
+USR_01845,enterprise,Electronics
+USR_01846,startup,Toys
+USR_01847,enterprise,Electronics
+USR_01848,enterprise,Books
+USR_01849,startup,Toys
+USR_01850,enterprise,Beauty
+USR_01851,startup,Clothing
+USR_01852,retail,Clothing
+USR_01853,startup,Sports
+USR_01854,retail,Clothing
+USR_01855,startup,Clothing
+USR_01856,retail,Home & Kitchen
+USR_01857,enterprise,Automotive
+USR_01858,retail,Home & Kitchen
+USR_01859,retail,Toys
+USR_01860,smb,Clothing
+USR_01861,retail,Home & Kitchen
+USR_01862,enterprise,Beauty
+USR_01863,smb,Sports
+USR_01864,smb,Clothing
+USR_01865,startup,Automotive
+USR_01866,retail,Home & Kitchen
+USR_01867,startup,Books
+USR_01868,startup,Automotive
+USR_01869,retail,Home & Kitchen
+USR_01870,startup,Home & Kitchen
+USR_01871,enterprise,Toys
+USR_01872,enterprise,Books
+USR_01873,retail,Sports
+USR_01874,retail,Books
+USR_01875,smb,Sports
+USR_01876,retail,Beauty
+USR_01877,retail,Toys
+USR_01878,enterprise,Books
+USR_01879,enterprise,Sports
+USR_01880,retail,Sports
+USR_01881,smb,Electronics
+USR_01882,enterprise,Toys
+USR_01883,enterprise,Electronics
+USR_01884,startup,Home & Kitchen
+USR_01885,retail,Books
+USR_01886,startup,Sports
+USR_01887,retail,Electronics
+USR_01888,smb,Home & Kitchen
+USR_01889,startup,Home & Kitchen
+USR_01890,enterprise,Automotive
+USR_01891,retail,Home & Kitchen
+USR_01892,retail,Automotive
+USR_01893,startup,Automotive
+USR_01894,startup,Electronics
+USR_01895,smb,Beauty
+USR_01896,enterprise,Clothing
+USR_01897,smb,Toys
+USR_01898,enterprise,Toys
+USR_01899,enterprise,Beauty
+USR_01900,retail,Automotive
+USR_01901,enterprise,Beauty
+USR_01902,startup,Automotive
+USR_01903,retail,Automotive
+USR_01904,smb,Home & Kitchen
+USR_01905,enterprise,Toys
+USR_01906,retail,Toys
+USR_01907,startup,Clothing
+USR_01908,smb,Clothing
+USR_01909,retail,Clothing
+USR_01910,retail,Automotive
+USR_01911,startup,Home & Kitchen
+USR_01912,startup,Sports
+USR_01913,enterprise,Clothing
+USR_01914,smb,Electronics
+USR_01915,retail,Electronics
+USR_01916,startup,Clothing
+USR_01917,startup,Clothing
+USR_01918,retail,Clothing
+USR_01919,startup,Toys
+USR_01920,startup,Electronics
+USR_01921,enterprise,Books
+USR_01922,retail,Sports
+USR_01923,enterprise,Books
+USR_01924,smb,Electronics
+USR_01925,startup,Electronics
+USR_01926,enterprise,Home & Kitchen
+USR_01927,retail,Books
+USR_01928,smb,Clothing
+USR_01929,smb,Beauty
+USR_01930,enterprise,Toys
+USR_01931,enterprise,Clothing
+USR_01932,startup,Electronics
+USR_01933,enterprise,Home & Kitchen
+USR_01934,enterprise,Books
+USR_01935,enterprise,Home & Kitchen
+USR_01936,smb,Sports
+USR_01937,retail,Home & Kitchen
+USR_01938,enterprise,Sports
+USR_01939,smb,Toys
+USR_01940,smb,Books
+USR_01941,enterprise,Automotive
+USR_01942,smb,Clothing
+USR_01943,startup,Sports
+USR_01944,retail,Clothing
+USR_01945,startup,Toys
+USR_01946,retail,Toys
+USR_01947,smb,Home & Kitchen
+USR_01948,enterprise,Home & Kitchen
+USR_01949,enterprise,Automotive
+USR_01950,smb,Toys
+USR_01951,enterprise,Books
+USR_01952,smb,Clothing
+USR_01953,startup,Books
+USR_01954,smb,Automotive
+USR_01955,smb,Sports
+USR_01956,startup,Home & Kitchen
+USR_01957,startup,Home & Kitchen
+USR_01958,smb,Home & Kitchen
+USR_01959,startup,Beauty
+USR_01960,retail,Home & Kitchen
+USR_01961,startup,Toys
+USR_01962,enterprise,Home & Kitchen
+USR_01963,startup,Sports
+USR_01964,startup,Automotive
+USR_01965,smb,Sports
+USR_01966,startup,Toys
+USR_01967,retail,Books
+USR_01968,smb,Electronics
+USR_01969,retail,Home & Kitchen
+USR_01970,enterprise,Home & Kitchen
+USR_01971,smb,Electronics
+USR_01972,smb,Automotive
+USR_01973,enterprise,Books
+USR_01974,enterprise,Sports
+USR_01975,retail,Home & Kitchen
+USR_01976,startup,Books
+USR_01977,smb,Electronics
+USR_01978,smb,Sports
+USR_01979,retail,Sports
+USR_01980,smb,Books
+USR_01981,enterprise,Clothing
+USR_01982,smb,Clothing
+USR_01983,startup,Beauty
+USR_01984,enterprise,Beauty
+USR_01985,retail,Clothing
+USR_01986,retail,Toys
+USR_01987,smb,Electronics
+USR_01988,enterprise,Clothing
+USR_01989,enterprise,Books
+USR_01990,enterprise,Sports
+USR_01991,smb,Books
+USR_01992,smb,Automotive
+USR_01993,retail,Books
+USR_01994,startup,Home & Kitchen
+USR_01995,enterprise,Automotive
+USR_01996,smb,Electronics
+USR_01997,smb,Sports
+USR_01998,startup,Home & Kitchen
+USR_01999,smb,Toys

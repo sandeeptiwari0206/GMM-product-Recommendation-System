@@ -1,0 +1,197 @@
+# =============================================================================
+# GMM Product Recommendation System — Master Configuration
+# Customize this file for your environment. All paths, hyperparameters,
+# feature names, and business rules are controlled from here.
+# =============================================================================
+
+# ---------------------------------------------------------------------------
+# PROJECT IDENTITY  (change these to match your project)
+# ---------------------------------------------------------------------------
+project:
+  name: "gmm-product-recommendation"
+  version: "1.0.0"
+  description: "B2B GMM-based soft-clustering recommendation engine"
+  author: "Your Name / Team"
+
+# ---------------------------------------------------------------------------
+# ENVIRONMENT  (auto-detected; override manually if needed)
+# local | sagemaker
+# ---------------------------------------------------------------------------
+environment: "auto"   # "auto" = detect via SM_MODEL_DIR env variable
+
+# ---------------------------------------------------------------------------
+# DATA PATHS  (relative to project root OR absolute S3 URIs for SageMaker)
+# ---------------------------------------------------------------------------
+data:
+  local:
+    products:  "data/raw/products_raw.csv"
+    users:     "data/raw/users.csv"
+    invoices:  "data/raw/invoices.csv"
+    processed: "data/processed/"
+
+  sagemaker:
+    products:  "s3://YOUR_BUCKET/gmm-recommendation/data/products_raw.csv"
+    users:     "s3://YOUR_BUCKET/gmm-recommendation/data/users.csv"
+    invoices:  "s3://YOUR_BUCKET/gmm-recommendation/data/invoices.csv"
+    prefix:    "gmm-recommendation"
+
+# ---------------------------------------------------------------------------
+# ARTIFACTS  (where models and preprocessors are saved)
+# ---------------------------------------------------------------------------
+artifacts:
+  local_dir:   "artifacts/"
+  model_file:  "model.joblib"
+  preprocessor_file: "preprocessor.joblib"
+  probabilities_file: "cluster_probabilities.npy"
+  products_clustered: "products_with_clusters.csv"
+  training_params: "training_params.json"
+
+# ---------------------------------------------------------------------------
+# FEATURES  (customize which columns to use)
+# ---------------------------------------------------------------------------
+features:
+  # Required columns in products_raw.csv
+  required_product_columns:
+    - product_id
+    - category
+    - price
+    - rating
+    - popularity
+    - discount_pct
+    - created_at
+
+  required_user_columns:
+    - user_id
+    - segment
+    - preferred_category
+
+  required_invoice_columns:
+    - invoice_id
+    - user_id
+    - product_id
+    - price
+    - purchase_date
+
+  # Numeric features fed into the GMM
+  numeric_features:
+    - price
+    - rating
+    - popularity
+    - discount_pct
+    - value_score
+    - popularity_weighted_rating
+    - normalized_price
+
+  # Categorical features (will be one-hot encoded)
+  categorical_features:
+    - category
+    - price_bucket
+
+  # Feature engineering settings
+  engineering:
+    price_bins:   [0, 50, 150, 300, 500, 99999]
+    price_labels: ["budget", "economy", "mid", "premium", "luxury"]
+
+# ---------------------------------------------------------------------------
+# TRAINING HYPERPARAMETERS
+# ---------------------------------------------------------------------------
+training:
+  n_components_min:   3
+  n_components_max:   7
+  covariance_types:   ["full", "tied", "diag", "spherical"]
+  max_iter:           300
+  n_init:             10
+  random_state:       42
+  selection_metric:   "bic"    # "bic" | "aic"
+
+# ---------------------------------------------------------------------------
+# RECOMMENDATION ENGINE
+# ---------------------------------------------------------------------------
+recommendation:
+  default_strategy:    "balanced"
+  default_top_n:       10
+  default_diversity_weight: 0.3
+  max_top_n:           50
+  cold_start:          "uniform"  # how to handle new users: "uniform" | "popular"
+
+  # Score thresholds for generating reason labels
+  reason_thresholds:
+    highly_rated:        0.70
+    price_match:         0.70
+    cluster_match:       0.60
+    top_seller:          0.75
+    great_discount:      0.70
+    new_arrival:         0.60
+
+  # Strategy weight profiles (must sum to 1.0)
+  strategies:
+    balanced:
+      cluster_probability_score: 0.30
+      price_similarity_score:    0.15
+      popularity_score:          0.20
+      rating_score:              0.20
+      discount_score:            0.10
+      diversity_score:           0.05
+
+    popular:
+      cluster_probability_score: 0.20
+      price_similarity_score:    0.10
+      popularity_score:          0.35
+      rating_score:              0.25
+      discount_score:            0.05
+      diversity_score:           0.05
+
+    value:
+      cluster_probability_score: 0.20
+      price_similarity_score:    0.20
+      popularity_score:          0.10
+      rating_score:              0.15
+      discount_score:            0.30
+      diversity_score:           0.05
+
+    new:
+      cluster_probability_score: 0.20
+      price_similarity_score:    0.15
+      popularity_score:          0.10
+      rating_score:              0.15
+      discount_score:            0.10
+      diversity_score:           0.30
+
+    diverse:
+      cluster_probability_score: 0.15
+      price_similarity_score:    0.10
+      popularity_score:          0.10
+      rating_score:              0.15
+      discount_score:            0.10
+      diversity_score:           0.40
+
+# ---------------------------------------------------------------------------
+# EVALUATION
+# ---------------------------------------------------------------------------
+evaluation:
+  output_dir:   "output/"
+  output_file:  "evaluation.json"
+  silhouette_sample_limit: 5000   # max rows for silhouette (performance)
+
+# ---------------------------------------------------------------------------
+# SAGEMAKER  (fill these in before deploying)
+# ---------------------------------------------------------------------------
+sagemaker:
+  role_arn:              "arn:aws:iam::703800905532:role/service-role/AmazonSageMaker-ExecutionRole-20260219T112938"
+  bucket:                "gmm-recommendation-bucket"
+  region:                "ap-south-1"
+  sklearn_version:       "1.2-1"
+  instance_type_training:   "ml.m5.2xlarge"
+  instance_type_processing: "ml.m5.xlarge"
+  instance_type_inference:  "ml.m5.xlarge"
+  pipeline_name:         "gmm-recommendation-pipeline"
+  model_package_group:   "GMM-Recommendation-Models"
+  baseline_bic:          1000000000.0
+  enable_cache:          true
+
+# ---------------------------------------------------------------------------
+# LOGGING
+# ---------------------------------------------------------------------------
+logging:
+  level:  "INFO"    # DEBUG | INFO | WARNING | ERROR
+  format: "%(asctime)s [%(levelname)s] %(name)s - %(message)s"

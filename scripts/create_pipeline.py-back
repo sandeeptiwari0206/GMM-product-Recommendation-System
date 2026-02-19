@@ -1,0 +1,361 @@
+"""
+scripts/create_pipeline.py
+==========================
+Create or update the SageMaker Pipeline for GMM training.
+
+Compatible with sagemaker SDK >= 2.100.0 (current Studio default).
+
+Key API fix — step_args pattern
+---------------------------------
+OLD (broken):  ProcessingStep(name=..., processor=..., code=..., arguments=[...])
+NEW (correct): ProcessingStep(name=..., step_args=processor.run(code=..., arguments=[...]))
+
+Same pattern for TrainingStep, ModelStep.
+
+Usage
+-----
+    python scripts/create_pipeline.py --upload-data
+    python scripts/create_pipeline.py --upsert
+    python scripts/create_pipeline.py --upsert --start
+    python scripts/create_pipeline.py --upsert --baseline-bic 450000
+"""
+
+import argparse
+import json
+import logging
+import os
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+
+from src.utils import load_config, get_sagemaker_config
+
+logger = logging.getLogger("create_pipeline")
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(name)s - %(message)s",
+)
+
+try:
+    import boto3
+    import sagemaker
+    from sagemaker.inputs import TrainingInput
+    from sagemaker.model import Model
+    from sagemaker.model_metrics import MetricsSource, ModelMetrics
+    from sagemaker.processing import ProcessingInput, ProcessingOutput
+    from sagemaker.sklearn.estimator import SKLearn
+    from sagemaker.sklearn.processing import SKLearnProcessor
+    from sagemaker.workflow.condition_step import ConditionStep
+    from sagemaker.workflow.conditions import ConditionLessThanOrEqualTo
+    from sagemaker.workflow.functions import JsonGet
+    from sagemaker.workflow.model_step import ModelStep
+    from sagemaker.workflow.parameters import (
+        ParameterFloat,
+        ParameterInteger,
+        ParameterString,
+    )
+    from sagemaker.workflow.pipeline import Pipeline
+    from sagemaker.workflow.properties import PropertyFile
+    from sagemaker.workflow.steps import CacheConfig, ProcessingStep, TrainingStep
+    SM_AVAILABLE = True
+except ImportError:
+    SM_AVAILABLE = False
+
+
+def create_pipeline(cfg: dict, baseline_bic: float = None) -> "Pipeline":
+    """
+    Build and return a SageMaker Pipeline using the step_args API
+    required by sagemaker SDK >= 2.100.0.
+    """
+    if not SM_AVAILABLE:
+        raise ImportError("Run: pip install sagemaker boto3")
+
+    sm_cfg       = get_sagemaker_config(cfg)
+    role         = sm_cfg["role_arn"]
+    bucket       = sm_cfg["bucket"]
+    region       = sm_cfg["region"]
+    prefix       = cfg["data"]["sagemaker"]["prefix"]
+    sk_ver       = sm_cfg["sklearn_version"]
+    p_name       = sm_cfg["pipeline_name"]
+    pkg_group    = sm_cfg["model_package_group"]
+    inst_train   = sm_cfg["instance_type_training"]
+    inst_proc    = sm_cfg["instance_type_processing"]
+    enable_cache = sm_cfg.get("enable_cache", True)
+    bic_thresh   = baseline_bic if baseline_bic is not None else float(sm_cfg.get("baseline_bic", 1e9))
+
+    boto_sess  = boto3.Session(region_name=region)
+    sess       = sagemaker.Session(boto_session=boto_sess)
+    cache_cfg  = CacheConfig(enable_caching=enable_cache, expire_after="30d")
+    s3_base    = f"s3://{bucket}/{prefix}"
+    proj_root  = str(Path(__file__).resolve().parents[1])
+
+    # ------------------------------------------------------------------
+    # Pipeline Parameters (overridable per-execution)
+    # ------------------------------------------------------------------
+    p_products  = ParameterString("ProductsS3Uri",  default_value=f"{s3_base}/data/products_raw.csv")
+    p_users     = ParameterString("UsersS3Uri",     default_value=f"{s3_base}/data/users.csv")
+    p_invoices  = ParameterString("InvoicesS3Uri",  default_value=f"{s3_base}/data/invoices.csv")
+    p_n_min     = ParameterInteger("NComponentsMin", default_value=cfg["training"]["n_components_min"])
+    p_n_max     = ParameterInteger("NComponentsMax", default_value=cfg["training"]["n_components_max"])
+    p_cov       = ParameterString("CovarianceTypes", default_value=",".join(cfg["training"]["covariance_types"]))
+    p_rand      = ParameterInteger("RandomState",    default_value=cfg["training"]["random_state"])
+    p_bic       = ParameterFloat("BaselineBIC",      default_value=bic_thresh)
+    p_pkg_group = ParameterString("ModelPackageGroup", default_value=pkg_group)
+
+    # ------------------------------------------------------------------
+    # Processor (used for preprocessing AND evaluation steps)
+    # ------------------------------------------------------------------
+    processor = SKLearnProcessor(
+        framework_version=sk_ver,
+        instance_type=inst_proc,
+        instance_count=1,
+        role=role,
+        sagemaker_session=sess,
+    )
+
+    # ==================================================================
+    # STEP 1 — Preprocessing
+    # Uses step_args=processor.run(...) pattern (SDK >= 2.100)
+    # ==================================================================
+    step_preprocess = ProcessingStep(
+        name="GMMPreprocessing",
+        step_args=processor.run(
+            code="src/data/preprocessing.py",
+            source_dir=proj_root,
+            inputs=[
+                ProcessingInput(
+                    source=p_products,
+                    destination="/opt/ml/processing/input/products",
+                    input_name="products",
+                ),
+                ProcessingInput(
+                    source=p_users,
+                    destination="/opt/ml/processing/input/users",
+                    input_name="users",
+                ),
+                ProcessingInput(
+                    source=p_invoices,
+                    destination="/opt/ml/processing/input/invoices",
+                    input_name="invoices",
+                ),
+            ],
+            outputs=[
+                ProcessingOutput(
+                    output_name="preprocessed",
+                    source="/opt/ml/processing/output",
+                    destination=f"{s3_base}/preprocessed",
+                ),
+            ],
+            arguments=[
+                "--products",  "/opt/ml/processing/input/products/products_raw.csv",
+                "--users",     "/opt/ml/processing/input/users/users.csv",
+                "--invoices",  "/opt/ml/processing/input/invoices/invoices.csv",
+            ],
+        ),
+        cache_config=cache_cfg,
+    )
+
+    # ==================================================================
+    # STEP 2 — Training
+    # Uses step_args=estimator.fit(...) pattern (SDK >= 2.100)
+    # ==================================================================
+    estimator = SKLearn(
+        entry_point="src/models/training.py",
+        source_dir=proj_root,
+        framework_version=sk_ver,
+        instance_type=inst_train,
+        instance_count=1,
+        role=role,
+        sagemaker_session=sess,
+        hyperparameters={
+            "n-components-min": p_n_min,
+            "n-components-max": p_n_max,
+            "covariance-types": p_cov,
+            "random-state":     p_rand,
+        },
+        output_path=f"{s3_base}/model-artifacts",
+    )
+
+    step_train = TrainingStep(
+        name="GMMTraining",
+        step_args=estimator.fit(
+            inputs={
+                "products": TrainingInput(
+                    s3_data=step_preprocess.properties.ProcessingOutputConfig
+                            .Outputs["preprocessed"].S3Output.S3Uri,
+                    content_type="text/csv",
+                ),
+            },
+        ),
+        cache_config=cache_cfg,
+    )
+
+    # ==================================================================
+    # STEP 3 — Evaluation
+    # ==================================================================
+    eval_report = PropertyFile(
+        name="EvaluationReport",
+        output_name="evaluation",
+        path="evaluation.json",
+    )
+
+    step_eval = ProcessingStep(
+        name="GMMEvaluation",
+        step_args=processor.run(
+            code="src/models/evaluation.py",
+            source_dir=proj_root,
+            inputs=[
+                ProcessingInput(
+                    source=step_train.properties.ModelArtifacts.S3ModelArtifacts,
+                    destination="/opt/ml/processing/input/model",
+                    input_name="model",
+                ),
+            ],
+            outputs=[
+                ProcessingOutput(
+                    output_name="evaluation",
+                    source="/opt/ml/processing/output",
+                    destination=f"{s3_base}/evaluation",
+                ),
+            ],
+        ),
+        property_files=[eval_report],
+        cache_config=cache_cfg,
+    )
+
+    # ==================================================================
+    # STEP 4a — Create SageMaker Model
+    # Uses step_args=model.create(...) pattern (SDK >= 2.100)
+    # ==================================================================
+    sm_model = Model(
+        image_uri=estimator.training_image_uri(),
+        model_data=step_train.properties.ModelArtifacts.S3ModelArtifacts,
+        sagemaker_session=sess,
+        role=role,
+        entry_point="src/inference.py",
+        source_dir=proj_root,
+    )
+
+    step_create_model = ModelStep(
+        name="GMMCreateModel",
+        step_args=sm_model.create(instance_type=inst_train),
+    )
+
+    # ==================================================================
+    # STEP 4b — Register Model in Model Registry
+    # Uses step_args=model.register(...) pattern (SDK >= 2.100)
+    # ==================================================================
+    model_metrics = ModelMetrics(
+        model_statistics=MetricsSource(
+            s3_uri=f"{s3_base}/evaluation/evaluation.json",
+            content_type="application/json",
+        )
+    )
+
+    step_register = ModelStep(
+        name="GMMRegisterModel",
+        step_args=sm_model.register(
+            content_types=["application/json", "text/csv"],
+            response_types=["application/json", "text/csv"],
+            inference_instances=[inst_train, "ml.m5.xlarge"],
+            transform_instances=[inst_train],
+            model_package_group_name=p_pkg_group,
+            approval_status="PendingManualApproval",
+            model_metrics=model_metrics,
+        ),
+    )
+
+    # ==================================================================
+    # STEP 5 — Conditional BIC Gate
+    # Only register if new BIC <= BaselineBIC parameter
+    # ==================================================================
+    new_bic = JsonGet(
+        step_name=step_eval.name,
+        property_file=eval_report,
+        json_path="metrics.bic",
+    )
+
+    step_condition = ConditionStep(
+        name="GMMBICCondition",
+        conditions=[ConditionLessThanOrEqualTo(left=new_bic, right=p_bic)],
+        if_steps=[step_create_model, step_register],
+        else_steps=[],
+    )
+
+    # ==================================================================
+    # Assemble Pipeline
+    # ==================================================================
+    pipeline = Pipeline(
+        name=p_name,
+        parameters=[
+            p_products, p_users, p_invoices,
+            p_n_min, p_n_max, p_cov, p_rand,
+            p_bic, p_pkg_group,
+        ],
+        steps=[step_preprocess, step_train, step_eval, step_condition],
+        sagemaker_session=sess,
+    )
+
+    logger.info("Pipeline '%s' built — 4 top-level steps.", p_name)
+    return pipeline
+
+
+def upload_data_to_s3(cfg: dict, local_data_dir: str = "data/raw") -> None:
+    """Upload local CSVs to S3 as configured in config.yaml."""
+    sm_cfg = get_sagemaker_config(cfg)
+    bucket = sm_cfg["bucket"]
+    prefix = cfg["data"]["sagemaker"]["prefix"]
+    region = sm_cfg["region"]
+    s3     = boto3.client("s3", region_name=region)
+
+    for fname in ["products_raw.csv", "users.csv", "invoices.csv"]:
+        local = os.path.join(local_data_dir, fname)
+        if os.path.exists(local):
+            key = f"{prefix}/data/{fname}"
+            s3.upload_file(local, bucket, key)
+            logger.info("Uploaded %s → s3://%s/%s", fname, bucket, key)
+        else:
+            logger.warning("File not found (skipped): %s", local)
+
+
+def parse_args():
+    p = argparse.ArgumentParser(description="Build SageMaker GMM Pipeline")
+    p.add_argument("--config",        default="config/config.yaml")
+    p.add_argument("--upsert",        action="store_true", help="Create/update pipeline")
+    p.add_argument("--start",         action="store_true", help="Start execution after upsert")
+    p.add_argument("--upload-data",   action="store_true", help="Upload CSVs to S3")
+    p.add_argument("--baseline-bic",  type=float, default=None,
+                   help="BIC threshold for conditional registration (default from config)")
+    p.add_argument("--no-cache",      action="store_true", help="Disable step caching")
+    return p.parse_args()
+
+
+if __name__ == "__main__":
+    args = parse_args()
+
+    if not SM_AVAILABLE:
+        logger.error("Install sagemaker SDK: pip install sagemaker boto3")
+        sys.exit(1)
+
+    cfg = load_config(args.config)
+    if args.no_cache:
+        cfg["sagemaker"]["enable_cache"] = False
+
+    if args.upload_data:
+        upload_data_to_s3(cfg)
+
+    pipeline = create_pipeline(cfg, baseline_bic=args.baseline_bic)
+
+    if args.upsert:
+        sm_cfg = get_sagemaker_config(cfg)
+        pipeline.upsert(role_arn=sm_cfg["role_arn"])
+        logger.info("Pipeline upserted → %s", sm_cfg["pipeline_name"])
+
+    if args.start:
+        execution = pipeline.start()
+        logger.info("Execution started → %s", execution.arn)
+
+    defn  = json.loads(pipeline.definition())
+    names = [s["Name"] for s in defn.get("Steps", [])]
+    logger.info("Pipeline steps: %s", names)
