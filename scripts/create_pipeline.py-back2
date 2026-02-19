@@ -57,8 +57,8 @@ try:
     )
     from sagemaker.workflow.pipeline import Pipeline
     from sagemaker.workflow.properties import PropertyFile
-    from sagemaker.workflow.pipeline_context import PipelineSession
     from sagemaker.workflow.steps import CacheConfig, ProcessingStep, TrainingStep
+    from sagemaker.workflow.pipeline_context import PipelineSession
     SM_AVAILABLE = True
 except ImportError:
     SM_AVAILABLE = False
@@ -86,7 +86,10 @@ def create_pipeline(cfg: dict, baseline_bic: float = None) -> "Pipeline":
     bic_thresh   = baseline_bic if baseline_bic is not None else float(sm_cfg.get("baseline_bic", 1e9))
 
     boto_sess  = boto3.Session(region_name=region)
-    sess = PipelineSession(boto_session=boto_sess)
+    # PipelineSession intercepts processor.run() / estimator.fit() calls
+    # during pipeline definition — prevents actual job submission and
+    # allows ParameterString/ParameterInteger to pass through as-is.
+    sess       = PipelineSession(boto_session=boto_sess)
     cache_cfg  = CacheConfig(enable_caching=enable_cache, expire_after="30d")
     s3_base    = f"s3://{bucket}/{prefix}"
     proj_root  = str(Path(__file__).resolve().parents[1])
@@ -105,31 +108,8 @@ def create_pipeline(cfg: dict, baseline_bic: float = None) -> "Pipeline":
     p_pkg_group = ParameterString("ModelPackageGroup", default_value=pkg_group)
 
     # ------------------------------------------------------------------
-    # Upload source code zip to S3 so processing containers can load it.
-    # SKLearnProcessor.run() does NOT support source_dir — we pass the
-    # project code as a ProcessingInput pointing to an S3 zip instead.
-    # ------------------------------------------------------------------
-    import shutil, tempfile
-    s3_client = boto3.client("s3", region_name=region)
-    with tempfile.TemporaryDirectory() as tmpdir:
-        archive_path = os.path.join(tmpdir, "source")
-        shutil.make_archive(archive_path, "zip", root_dir=proj_root, base_dir=".")
-        source_zip_local = archive_path + ".zip"
-        source_s3_key    = f"{prefix}/source/source.zip"
-        s3_client.upload_file(source_zip_local, bucket, source_s3_key)
-        source_s3_uri = f"s3://{bucket}/{source_s3_key}"
-        logger.info("Source code uploaded to %s", source_s3_uri)
-
-    # Re-usable ProcessingInput that injects our source into the container.
-    # SageMaker extracts the zip into /opt/ml/processing/input/code/
-    source_input = ProcessingInput(
-        source=source_s3_uri,
-        destination="/opt/ml/processing/input/code",
-        input_name="code",
-    )
-
-    # ------------------------------------------------------------------
-    # Processor (used for preprocessing AND evaluation steps)
+    # Processor — uses flat self-contained scripts (no src.* imports)
+    # scripts/sm_preprocessing.py and scripts/sm_evaluation.py
     # ------------------------------------------------------------------
     processor = SKLearnProcessor(
         framework_version=sk_ver,
@@ -138,6 +118,7 @@ def create_pipeline(cfg: dict, baseline_bic: float = None) -> "Pipeline":
         role=role,
         sagemaker_session=sess,
     )
+    scripts_dir = os.path.join(proj_root, "scripts")
 
     # ==================================================================
     # STEP 1 — Preprocessing
@@ -145,11 +126,8 @@ def create_pipeline(cfg: dict, baseline_bic: float = None) -> "Pipeline":
     step_preprocess = ProcessingStep(
         name="GMMPreprocessing",
         step_args=processor.run(
-            # Pass the absolute local path — SDK uploads just this one file.
-            # Our src package is already available via source_input below.
-            code=os.path.join(proj_root, "src", "data", "preprocessing.py"),
+            code=os.path.join(scripts_dir, "sm_preprocessing.py"),
             inputs=[
-                source_input,
                 ProcessingInput(
                     source=p_products,
                     destination="/opt/ml/processing/input/products",
@@ -187,8 +165,8 @@ def create_pipeline(cfg: dict, baseline_bic: float = None) -> "Pipeline":
     # Uses step_args=estimator.fit(...) pattern (SDK >= 2.100)
     # ==================================================================
     estimator = SKLearn(
-        entry_point="src/models/training.py",
-        source_dir=proj_root,
+        entry_point="sm_training.py",
+        source_dir=scripts_dir,
         framework_version=sk_ver,
         instance_type=inst_train,
         instance_count=1,
@@ -229,9 +207,8 @@ def create_pipeline(cfg: dict, baseline_bic: float = None) -> "Pipeline":
     step_eval = ProcessingStep(
         name="GMMEvaluation",
         step_args=processor.run(
-            code=os.path.join(proj_root, "src", "models", "evaluation.py"),
+            code=os.path.join(scripts_dir, "sm_evaluation.py"),
             inputs=[
-                source_input,
                 ProcessingInput(
                     source=step_train.properties.ModelArtifacts.S3ModelArtifacts,
                     destination="/opt/ml/processing/input/model",

@@ -287,6 +287,50 @@ def create_pipeline(cfg: dict, baseline_bic: float = None) -> "Pipeline":
     )
 
     # ==================================================================
+    # STEP 5 — Generate Recommendations CSV (always runs after eval)
+    # Saves all_customer_recommendations.csv to S3
+    # ==================================================================
+    step_recommendations = ProcessingStep(
+        name="GMMGenerateRecommendations",
+        step_args=processor.run(
+            code=os.path.join(scripts_dir, "sm_generate_recommendations.py"),
+            inputs=[
+                ProcessingInput(
+                    source=step_train.properties.ModelArtifacts.S3ModelArtifacts,
+                    destination="/opt/ml/processing/input/model",
+                    input_name="model",
+                ),
+                ProcessingInput(
+                    source=p_invoices,
+                    destination="/opt/ml/processing/input/invoices",
+                    input_name="invoices",
+                ),
+                ProcessingInput(
+                    source=p_users,
+                    destination="/opt/ml/processing/input/users",
+                    input_name="users",
+                ),
+            ],
+            outputs=[
+                ProcessingOutput(
+                    output_name="recommendations",
+                    source="/opt/ml/processing/output",
+                    destination=f"{s3_base}/recommendations",
+                ),
+            ],
+            arguments=[
+                "--invoices",  "/opt/ml/processing/input/invoices/invoices.csv",
+                "--users",     "/opt/ml/processing/input/users/users.csv",
+                "--top-n",     "10",
+                "--min-n",     "3",
+                "--strategy",  "balanced",
+            ],
+        ),
+        depends_on=[step_eval],   # eval ke baad run hoga
+        cache_config=cache_cfg,
+    )
+
+    # ==================================================================
     # Assemble Pipeline
     # ==================================================================
     pipeline = Pipeline(
@@ -296,11 +340,11 @@ def create_pipeline(cfg: dict, baseline_bic: float = None) -> "Pipeline":
             p_n_min, p_n_max, p_cov, p_rand,
             p_bic, p_pkg_group,
         ],
-        steps=[step_preprocess, step_train, step_eval, step_condition],
+        steps=[step_preprocess, step_train, step_eval, step_condition, step_recommendations],
         sagemaker_session=sess,
     )
 
-    logger.info("Pipeline '%s' built — 4 top-level steps.", p_name)
+    logger.info("Pipeline '%s' built — 5 top-level steps.", p_name)
     return pipeline
 
 
